@@ -1,4 +1,5 @@
 import { assets } from "@/public/assets/assets";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => {
@@ -41,29 +42,15 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/services"
-              className="px-4 py-2 bg-accent text-on-accent rounded-full font-bold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="flex items-center px-4 py-2 bg-accent text-on-accent rounded-full font-bold gap-1"
             >
               Explore Our Services
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="inline-block ml-2"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <ArrowRight className="inline-block size-5" />
             </Link>
 
             <Link
               href="/contact"
-              className="px-4 py-2 border-2 border-on-primary text-on-primary rounded-full font-bold hover:bg-primary/10 transition-all duration-300"
+              className="px-4 py-2 border-2 border-on-primary text-on-primary rounded-full font-bold"
             >
               Get Free Quote
             </Link>
@@ -72,21 +59,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="max-md:hidden absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-on-primary"
-          >
-            <path d="M12 5v14" />
-            <path d="m19 12-7 7-7-7" />
-          </svg>
+          <ArrowDown className="text-on-primary" />
         </div>
       </div>
     </section>

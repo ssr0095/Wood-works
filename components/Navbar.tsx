@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { assets, navMenu } from "@/public/assets/assets";
 import { useState } from "react";
-import { X, Menu } from "lucide-react";
+import { X, Menu, ArrowRight, Phone } from "lucide-react";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -28,13 +28,13 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src={assets.logo}
+              src={assets.wood7}
               width={32}
               height={32}
               alt="PSK Wood Works Logo"
               className="text-on-primary rounded-full"
             />
-            <span className="text-xl font-semibold text-on-surface">
+            <span className="text-xl font-bold text-on-surface">
               PSK Wood Works
             </span>
           </Link>
@@ -59,21 +59,7 @@ const Navbar = () => {
               className="px-5 py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary/90 transition-colors font-medium text-sm shadow-xs hover:shadow-sm flex items-center gap-1.5"
             >
               Contact Us
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-arrow-right-icon lucide-arrow-right size-4"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <Phone className="size-4" />
             </Link>
           </div>
 
@@ -156,21 +142,7 @@ const Navbar = () => {
               className="w-full px-6 py-3 rounded-full bg-primary text-on-primary font-medium flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors shadow-xs"
             >
               <span>Get Free Estimate</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-arrow-right-icon lucide-arrow-right size-4"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              <ArrowRight />
             </Link>
           </div>
         </div>

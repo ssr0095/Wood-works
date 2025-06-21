@@ -4,35 +4,16 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loading from "@/components/Loading";
 
-const outFit = localFont({
+const outfit = localFont({
   src: [
     {
-      path: "./fonts/Outfit-ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Outfit-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Outfit-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Outfit-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Outfit-Regular.ttf",
-      weight: "400",
+      path: "./fonts/Outfit-Variable.woff2",
+      weight: "100 900",
       style: "normal",
     },
   ],
   variable: "--font-outfit",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -46,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${outFit.className} no-scrollbar`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} scroll-smooth scrollbar-custom`}
+    >
+      <body className="font-sans">
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </body>
     </html>
