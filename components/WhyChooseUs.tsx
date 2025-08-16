@@ -52,7 +52,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="from-muted/50 to-muted bg-linear-to-b">
+            <Card key={index} className="">
               <CardHeader>
                 <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4">
                   {feature.icon}
