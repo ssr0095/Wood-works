@@ -1,9 +1,11 @@
-import { assets, categoryList, themeList } from "@/public/assets/assets";
+import { assets, categoryList } from "@/public/assets/assets";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
+
 const Footer = () => {
-  const theme = themeList.slice(0, 4);
+  // const theme = themeList.slice(0, 4);
   return (
     <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 bg-gradient-to-t from-accent to-background">
       <div className="my-6 z-10">
@@ -30,16 +32,16 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/about">About us</a>
+              <Link href="/about">About us</Link>
             </li>
             <li>
-              <a href="/collection">Collection</a>
+              <Link href="/collection">Collection</Link>
             </li>
             <li>
-              <a href="#">Privacy policy</a>
+              <Link href="#">Privacy policy</Link>
             </li>
           </ul>
         </div>
@@ -49,9 +51,9 @@ const Footer = () => {
             SERVICES
           </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
-            {categoryList.map((item, i) => (
+            {categoryList.map((item) => (
               <li key={item}>
-                <a href="/collection">{item}</a>
+                <Link href="/collection">{item}</Link>
               </li>
             ))}
           </ul>
@@ -61,13 +63,13 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">LEGAL</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <a href="#">Privacy policy</a>
+              <Link href="#">Privacy policy</Link>
             </li>
             <li>
-              <a href="#">Terms & Conditions</a>
+              <Link href="#">Terms & Conditions</Link>
             </li>
             <li>
-              <a href="#">Shipping Policy</a>
+              <Link href="#">Shipping Policy</Link>
             </li>
           </ul>
         </div>
@@ -78,17 +80,17 @@ const Footer = () => {
           </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <a
+              <Link
                 className="flex items-center gap-2 hover:underline"
                 // alt="whatsapp"
                 href="https://wa.me/8248586654?text=Hey!%20I%20saw%20your%20collection%20and%20loved%20it.%20Can%20you%20help%20me%20with%20sizes%20and%20pricing?"
               >
                 <Phone className="w-4" />
                 +91 98945 96902
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="mailto:cousinsfashion2025@gmail.com"
                 aria-label="Email Us"
                 className="flex items-center gap-2 hover:underline"
@@ -109,7 +111,7 @@ const Footer = () => {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
                 info@pskwoodworks.com
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -118,7 +120,7 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">
             INSTAGRAM
           </p>
-          <a
+          <Link
             href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
             target="_blank"
             className="w-fit grid grid-cols-2 gap-4"
@@ -143,7 +145,7 @@ const Footer = () => {
               alt="instgram image 4"
               className="max-w-16"
             />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -151,7 +153,7 @@ const Footer = () => {
         <p className="text-sm text-foreground/95">CONNECT WITH US</p>
         <ul className="flex items-center text-foreground/70">
           <li>
-            <a
+            <Link
               href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
               className="p-2"
               // alt="instagram"
@@ -173,7 +175,7 @@ const Footer = () => {
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

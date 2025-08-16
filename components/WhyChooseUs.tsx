@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { exp_info } from "@/public/assets/assets";
 
-const WhyChooseUs = ({ btnNeed }: { btnNeed: Boolean }) => {
+const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
   const features = [
     {
       icon: <Hammer />,
