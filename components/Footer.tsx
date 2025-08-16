@@ -1,26 +1,3 @@
-<<<<<<< Updated upstream
-import { assets, navMenu } from "@/public/assets/assets";
-import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-const Footer = () => {
-  return (
-    <footer className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-gray-50 border-t mt-40">
-      <div className="my-6">
-        <Link href="/" className="flex items-center gap-3 mb-4">
-          <Image
-            src={assets.wood7}
-            width={32}
-            height={32}
-            alt="PSK Wood Works Logo"
-            className="text-on-primary rounded-full"
-          />
-          <span className="text-xl font-bold text-on-surface">
-            PSK Wood Works
-          </span>
-        </Link>
-        <p className="w-full md:w-11/12 text-gray-600 text-sm">
-=======
 import { assets, categoryList, themeList } from "@/public/assets/assets";
 import { Phone } from "lucide-react";
 import Image from "next/image";
@@ -31,16 +8,15 @@ const Footer = () => {
     <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 bg-gradient-to-t from-accent to-background">
       <div className="my-6 z-10">
         {/* <Link href="/" className="flex items-center gap-3"> */}
-            <Image
-              src={assets.logo}
-              width={32}
-              height={32}
-              alt="PSK Wood Works Logo"
-              className="rounded-full mb-4"
-            />
+        <Image
+          src={assets.logo}
+          width={32}
+          height={32}
+          alt="PSK Wood Works Logo"
+          className="rounded-full mb-4"
+        />
         {/* </Link> */}
         <p className="w-full md:w-11/12 text-foreground/70 text-sm">
->>>>>>> Stashed changes
           CousinsFashion brings you stylish, high-quality fashion for every
           occasion. Explore trendy clothing and accessories for men and women,
           blending comfort with style. Shop hassle-free with easy payments, fast
@@ -48,19 +24,11 @@ const Footer = () => {
           at CousinsFashion!
         </p>
       </div>
-<<<<<<< Updated upstream
-      <hr />
-      <div className="flex flex-col sm:grid sm:grid-cols-[1fr_1fr_1fr_1fr] gap-7 sm:gap-14 my-10 text-sm">
-        <div>
-          <p className="text-xl font-medium mb-5">COMPANY</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
-=======
-      <Separator/>
+      <Separator />
       <div className="flex flex-col sm:grid sm:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr_1fr] gap-7 sm:gap-14 my-10 text-sm">
         <div>
           <p className="text-xl font-medium text-foreground/95 mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
->>>>>>> Stashed changes
             <li>
               <a href="/">Home</a>
             </li>
@@ -77,32 +45,21 @@ const Footer = () => {
         </div>
 
         <div>
-<<<<<<< Updated upstream
-          <p className="text-xl font-medium mb-5">SERVICES</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
-            {navMenu.map((item, i) => (
-              <li key={i}>
-                <a href={`${item.href}`}>{item.name}</a>
-=======
-          <p className="text-xl font-medium text-foreground/95 mb-5">SERVICES</p>
+          <p className="text-xl font-medium text-foreground/95 mb-5">
+            SERVICES
+          </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             {categoryList.map((item, i) => (
               <li key={item}>
                 <a href="/collection">{item}</a>
->>>>>>> Stashed changes
               </li>
             ))}
           </ul>
         </div>
 
         <div>
-<<<<<<< Updated upstream
-          <p className="text-xl font-medium mb-5">LEGAL</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
-=======
           <p className="text-xl font-medium text-foreground/95 mb-5">LEGAL</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
->>>>>>> Stashed changes
             <li>
               <a href="#">Privacy policy</a>
             </li>
@@ -116,13 +73,10 @@ const Footer = () => {
         </div>
 
         <div className="sm:col-span-2 lg:col-span-1">
-<<<<<<< Updated upstream
-          <p className="text-xl font-medium mb-5">NEED HELP?</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
-=======
-          <p className="text-xl font-medium text-foreground/95 mb-5">NEED HELP?</p>
+          <p className="text-xl font-medium text-foreground/95 mb-5">
+            NEED HELP?
+          </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
->>>>>>> Stashed changes
             <li>
               <a
                 className="flex items-center gap-2 hover:underline"
@@ -135,14 +89,6 @@ const Footer = () => {
             </li>
             <li>
               <a
-<<<<<<< Updated upstream
-                href="mailto:pskwoodworks@gmail.com"
-                aria-label="Email Us"
-                className="flex items-center gap-2 hover:underline"
-              >
-                <Mail className="w-4" />
-                pskwoodworks@gmail.com
-=======
                 href="mailto:cousinsfashion2025@gmail.com"
                 aria-label="Email Us"
                 className="flex items-center gap-2 hover:underline"
@@ -163,26 +109,40 @@ const Footer = () => {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
                 info@pskwoodworks.com
->>>>>>> Stashed changes
               </a>
             </li>
           </ul>
         </div>
-<<<<<<< Updated upstream
-      </div>
-
-      <div className="w-full flex items-center justify-end gap-1 mb-2">
-        <p className="text-sm">CONNECT WITH US</p>
-        <ul className="flex items-center text-gray-600">
-=======
 
         <div>
-          <p className="text-xl font-medium text-foreground/95 mb-5">INSTAGRAM</p>
-          <a href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2" target="_blank" className="w-fit grid grid-cols-2 gap-4">
-            <Image src={assets.logo} alt="instgram image 1" className="max-w-16"/>
-            <Image src={assets.logo} alt="instgram image 2" className="max-w-16"/>
-            <Image src={assets.logo} alt="instgram image 3" className="max-w-16"/>
-            <Image src={assets.logo} alt="instgram image 4" className="max-w-16"/>
+          <p className="text-xl font-medium text-foreground/95 mb-5">
+            INSTAGRAM
+          </p>
+          <a
+            href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
+            target="_blank"
+            className="w-fit grid grid-cols-2 gap-4"
+          >
+            <Image
+              src={assets.logo}
+              alt="instgram image 1"
+              className="max-w-16"
+            />
+            <Image
+              src={assets.logo}
+              alt="instgram image 2"
+              className="max-w-16"
+            />
+            <Image
+              src={assets.logo}
+              alt="instgram image 3"
+              className="max-w-16"
+            />
+            <Image
+              src={assets.logo}
+              alt="instgram image 4"
+              className="max-w-16"
+            />
           </a>
         </div>
       </div>
@@ -190,7 +150,6 @@ const Footer = () => {
       <div className="w-full flex items-center justify-end gap-1 mb-2">
         <p className="text-sm text-foreground/95">CONNECT WITH US</p>
         <ul className="flex items-center text-foreground/70">
->>>>>>> Stashed changes
           <li>
             <a
               href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
@@ -219,13 +178,8 @@ const Footer = () => {
         </ul>
       </div>
 
-<<<<<<< Updated upstream
-      <hr />
-      <div className="w-full flex items-center justify-center sm:justify-between py-5 text-xs text-gray-500">
-=======
       <Separator />
       <div className="w-full flex items-center justify-center sm:justify-between py-5 text-xs text-muted-foreground">
->>>>>>> Stashed changes
         <p className="max-sm:hidden">
           Privacy Policy <span className="px-1">|</span> Terms of Use
         </p>
@@ -238,8 +192,4 @@ const Footer = () => {
   );
 };
 
-<<<<<<< Updated upstream
 export default Footer;
-=======
-export default Footer;
->>>>>>> Stashed changes

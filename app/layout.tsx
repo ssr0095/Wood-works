@@ -10,11 +10,7 @@ import { ThemeProvider } from "next-themes";
 const outfit = localFont({
   src: [
     {
-<<<<<<< Updated upstream
-      path: "./fonts/Outfit-Variable.woff2",
-=======
       path: "./fonts/Outfit-Variable.ttf",
->>>>>>> Stashed changes
       weight: "100 900",
       style: "normal",
     },
@@ -100,15 +96,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-<<<<<<< Updated upstream
     <html
       lang="en"
-      className={`${outfit.variable} scroll-smooth scrollbar-custom`}
+      className={`${outfit.variable} scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="font-sans">
-        <Suspense fallback={<Loading />}>{children}</Suspense>
-=======
-    <html lang="en" className={`${outfit.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="font-sans">
         <ThemeProvider
           attribute="class"
@@ -116,14 +108,11 @@ export default function RootLayout({
           enableSystem // toggle true
           disableTransitionOnChange
           // forcedTheme={Component.theme || null}
-          scriptProps={{ 'data-cfasync': 'false' }} // require when cloudflare Rocket Loader used - make it work
+          scriptProps={{ "data-cfasync": "false" }} // require when cloudflare Rocket Loader used - make it work
         >
-          <Suspense fallback={<Loading />}>
-            {children}
-          </Suspense>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
         </ThemeProvider>
         {/* <StructuredData /> */}
->>>>>>> Stashed changes
       </body>
     </html>
   );
