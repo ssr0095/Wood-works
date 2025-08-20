@@ -10,6 +10,7 @@ import wood9 from "@/public/assets/images/img_09.jpg";
 import wood10 from "@/public/assets/images/img_10.jpg";
 import wood11 from "@/public/assets/images/img_11.jpg";
 import logo from "@/public/assets/images/donet.webp";
+import bg_star_dark from "@/public/assets/images/bg-star-dark.svg";
 export const assets = {
   wood1,
   wood2,
@@ -22,7 +23,8 @@ export const assets = {
   wood9,
   wood10,
   wood11,
-  logo
+  logo,
+  bg_star_dark,
 };
 
 export const navMenu = [
@@ -48,26 +50,109 @@ export const themeList = [
 export const categoryList = ["Men", "Women", "Unisex", "Kids"];
 
 export const category = [
-  { id: 1, name: "Aesthetics", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood1 },
-  { id: 2, name: "Illustration", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood2 },
-  { id: 3, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood3 },
-  { id: 4, name: "Aesthetics", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood4 },
-  { id: 5, name: "Illustration", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood5 },
-  { id: 6, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood6 },
-  { id: 7, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood7 },
-  { id: 8, name: "Aesthetics", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood8 },
-  { id: 9, name: "Illustration", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood9 },
-  { id: 10, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood10 },
-  { id: 11, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood11 },
-  { id: 12, name: "Aesthetics", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood1 },
-  { id: 13, name: "Illustration", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.", image: wood2 },
-  { id: 14, name: "Others", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.", image: wood3 },
-
+  {
+    id: 1,
+    name: "Aesthetics",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood1,
+  },
+  {
+    id: 2,
+    name: "Illustration",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood2,
+  },
+  {
+    id: 3,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood3,
+  },
+  {
+    id: 4,
+    name: "Aesthetics",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood4,
+  },
+  {
+    id: 5,
+    name: "Illustration",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood5,
+  },
+  {
+    id: 6,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood6,
+  },
+  {
+    id: 7,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood7,
+  },
+  {
+    id: 8,
+    name: "Aesthetics",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood8,
+  },
+  {
+    id: 9,
+    name: "Illustration",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood9,
+  },
+  {
+    id: 10,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood10,
+  },
+  {
+    id: 11,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood11,
+  },
+  {
+    id: 12,
+    name: "Aesthetics",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood1,
+  },
+  {
+    id: 13,
+    name: "Illustration",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    image: wood2,
+  },
+  {
+    id: 14,
+    name: "Others",
+    description:
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
+    image: wood3,
+  },
 ];
 
 export const exp_info = [
   { value: "25+", label: "Years Experience" },
-  { value: "500+", label: "Projects Completed" },
+  { value: "1500+", label: "Projects Completed" },
   { value: "100%", label: "Client Satisfaction" },
-  { value: "5", label: "Master Craftsmen" },
-]
+  { value: "25+", label: "Master Craftsmen" },
+];

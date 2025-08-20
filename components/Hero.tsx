@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="max-w-7xl px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
           {/* Main Heading */}
           <h1 className="text-[min(15vw,135px)] font-medium leading-tight xl:leading-32 tracking-tight text-balance max-sm:text-center text-start text-primary-foreground mb-16">
-            <span>Woodwork that </span>Speaks Quality
+            <span>Interior work that </span>Speaks Quality
           </h1>
 
           {/* Subheading */}

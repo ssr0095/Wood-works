@@ -5,6 +5,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import Loading from "@/components/Loading";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "sonner";
 // import { StructuredData } from "@/components/StructuredData";
 
 const outfit = localFont({
@@ -23,8 +24,8 @@ const outfit = localFont({
 export const metadata: Metadata = {
   title: {
     default:
-      "PSK WOOD WORKS — Trendy Streetwear & Oversized T-Shirts Online India",
-    template: "%s | PSK WOOD WORKS",
+      "PSK INTERIORS — Trendy Streetwear & Oversized T-Shirts Online India",
+    template: "%s | PSK INTERIORS",
   },
   // description:
   //   "Shop the latest streetwear fashion at Cousins Fashion - premium oversized t-shirts, trendy clothing & accessories for men & women. Free shipping across India. 100% cotton comfort.",
@@ -102,6 +103,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans">
+        <Toaster />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

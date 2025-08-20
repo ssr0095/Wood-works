@@ -15,7 +15,7 @@ const ServiceCollection = () => {
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
-            Exceptional Woodwork{" "}
+            Exceptional Interior work{" "}
             <span className="text-primary">Crafted with Passion</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-on-surface-variant">

@@ -36,6 +36,8 @@ const About = () => {
               className="lg:mx-0 mx-auto h-full rounded-3xl object-cover ring-4 ring-primary"
               src="https://pagedone.io/asset/uploads/1717751272.png"
               alt="about Us image"
+              width={500}
+              height={500}
             />
             <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span>
           </div>

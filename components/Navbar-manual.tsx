@@ -5,7 +5,7 @@ import { assets, navMenu } from "@/public/assets/assets";
 import { useState } from "react";
 import { X, Menu, PhoneIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import ThemeToggle  from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -33,11 +33,11 @@ const Navbar = () => {
               src={assets.logo}
               width={32}
               height={32}
-              alt="PSK Wood Works Logo"
+              alt="PSK Interiors Logo"
               className="rounded-full"
             />
             <h1 className="text-lg md:text-xl font-semibold text-foreground ">
-              PSK Wood Works
+              PSK Interiors
             </h1>
           </Link>
 
@@ -54,22 +54,24 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div>
-          </div>
+          <div></div>
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-5">
-            <ThemeToggle/>
+            <ThemeToggle />
             <Link
               href="/contact"
               // className="px-5 py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary/90 transition-colors font-medium text-sm shadow-xs hover:shadow-sm flex items-center gap-1.5"
             >
-              <Button size="lg"><PhoneIcon/>Call Now</Button>
-            </Link> 
+              <Button size="lg">
+                <PhoneIcon />
+                Call Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center gap-1">
-            <ThemeToggle/>
+            <ThemeToggle />
             <button
               className="p-2 rounded-full hover:bg-accent hover:text-accent-foreground active:bg-accent/80 dark:hover:bg-secondary/10 dark:active:bg-secondary/20 dark:active:ring-secondary/25 ring ring-background/0 transition-colors"
               onClick={() => setVisible(true)}
@@ -108,11 +110,11 @@ const Navbar = () => {
                 src={assets.logo}
                 width={32}
                 height={32}
-                alt="PSK Wood Works"
+                alt="PSK Interiors"
                 className="rounded-full"
               />
               <h1 className="text-xl font-semibold text-foreground">
-                PSK Wood Works
+                PSK Interiors
               </h1>
             </Link>
             <button

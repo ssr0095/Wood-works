@@ -3,9 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { assets, navMenu } from "@/public/assets/assets";
-import { Menu, ArrowRight, Copy, Phone } from "lucide-react";
+import { Separator } from "./ui/separator";
+import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "./ui/button";
 import ThemeToggle from "./ThemeToggle";
+import {
+  Menu,
+  ArrowRight,
+  Copy,
+  Phone,
+  Headphones,
+  Mail,
+} from "lucide-react";
 import {
   Drawer,
   DrawerClose,
@@ -33,10 +43,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Separator } from "./ui/separator";
-import { useState } from "react";
-import { Input } from "./ui/input";
-import { Label } from "@radix-ui/react-label";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -67,11 +73,11 @@ const Navbar = () => {
               src={assets.wood7}
               width={32}
               height={32}
-              alt="PSK Wood Works Logo"
+              alt="PSK Interiors Logo"
               className="rounded-full"
             />
             <h1 className="text-lg md:text-xl font-semibold text-foreground ">
-              PSK Wood Works
+              PSK Interiors
             </h1>
           </Link>
           {/* Desktop Navigation */}
@@ -155,42 +161,57 @@ const Navbar = () => {
                 </Button>
               </DrawerTrigger>
               <DrawerContent className="flex items-center justify-center">
-                <DrawerHeader className="text-left">
-                  <DrawerTitle>Edit profile</DrawerTitle>
-                  <DrawerDescription>
-                    Make changes to your profile here. Click save when
-                    you&apos;re done.
+                <DrawerHeader className="w-full max-w-sm px-4 flex items-center justify-start">
+                  <div className="size-12 rounded-full bg-primary text-primary-foreground text-center flex items-center justify-center mb-4">
+                    <Headphones />
+                  </div>
+                  <DrawerTitle className="text-3xl">Contact us</DrawerTitle>
+                  <DrawerDescription className="text-md">
+                    Help is just a click away.
                   </DrawerDescription>
                 </DrawerHeader>
                 <div className="w-full max-w-sm px-4">
-                  <div className={" grid items-start gap-6"}>
-                    <div className="grid gap-3">
-                      <Label htmlFor="email">Email</Label>
-                      <div className="flex items-center gap-1">
-                        <Input
-                          type="email"
-                          id="email"
-                          defaultValue="shadcn@example.com"
-                        />
-                        <Button variant="outline" size="icon">
-                          <Copy className="" />
-                        </Button>
+                  <div className="grid items-start gap-6">
+                    <p className="text-sm text-center text-foreground">
+                      Call us anytime between 10am - 7pm
+                    </p>
+                    <div
+                      className="flex items-center gap-3 cursor-pointer group"
+                      onClick={async () => {
+                        await navigator.clipboard.writeText("+91 9894796902");
+                        toast.success("Copied");
+                      }}
+                    >
+                      <Phone />
+                      <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
+                        +91 98947-96902
                       </div>
+                      <Button size="icon">
+                        <Copy />
+                      </Button>
                     </div>
-                    <div className="grid gap-3">
-                      <Label htmlFor="username">Username</Label>
-                      <div className="flex items-center gap-1">
-                        <Input id="username" defaultValue="@shadcn" />
-                        <Button variant="outline" size="icon">
-                          <Copy className="" />
-                        </Button>
+                    <div
+                      className="flex items-center gap-3 cursor-pointer"
+                      onClick={async () => {
+                        await navigator.clipboard.writeText(
+                          "care@pskinteriors.com"
+                        );
+                        toast.success("Copied");
+                      }}
+                    >
+                      <Mail />
+                      <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
+                        care@pskinteriors.com
                       </div>
+                      <Button size="icon">
+                        <Copy className="" />
+                      </Button>
                     </div>
                   </div>
                 </div>
                 <DrawerFooter className="w-full max-w-sm my-6">
                   <DrawerClose asChild>
-                    <Button>Close</Button>
+                    <Button variant="secondary">Close</Button>
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>
@@ -217,7 +238,7 @@ const Navbar = () => {
                       src={assets.logo}
                       width={32}
                       height={32}
-                      alt="PSK Wood Works"
+                      alt="PSK Interiors Logo"
                       className="rounded-full"
                     />
                   </SheetTitle>

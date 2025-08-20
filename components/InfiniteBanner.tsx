@@ -26,7 +26,7 @@ const InfiniteBanner = () => {
                   src={assets.logo}
                   width={32}
                   height={32}
-                  alt="PSK Wood Works Logo"
+                  alt="PSK Interiors Logo"
                   className="text-on-primary rounded-full"
                   loading="lazy"
                 />
@@ -43,7 +43,7 @@ const InfiniteBanner = () => {
                   src={assets.logo}
                   width={32}
                   height={32}
-                  alt="PSK Wood Works Logo"
+                  alt="PSK Interiors Logo"
                   className="text-on-primary rounded-full"
                   loading="lazy"
                 />

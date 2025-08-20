@@ -7,14 +7,14 @@ import Link from "next/link";
 const Footer = () => {
   // const theme = themeList.slice(0, 4);
   return (
-    <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 bg-gradient-to-t from-accent to-background">
+    <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 bg-[url(/assets/images/bg-wave.svg)] dark:bg-[url(/assets/images/bg-wave-dark.svg)]">
       <div className="my-6 z-10">
         {/* <Link href="/" className="flex items-center gap-3"> */}
         <Image
           src={assets.logo}
           width={32}
           height={32}
-          alt="PSK Wood Works Logo"
+          alt="PSK Interiors Logo"
           className="rounded-full mb-4"
         />
         {/* </Link> */}
@@ -86,12 +86,12 @@ const Footer = () => {
                 href="https://wa.me/8248586654?text=Hey!%20I%20saw%20your%20collection%20and%20loved%20it.%20Can%20you%20help%20me%20with%20sizes%20and%20pricing?"
               >
                 <Phone className="w-4" />
-                +91 98945 96902
+                +91 98945-96902
               </Link>
             </li>
             <li>
               <Link
-                href="mailto:cousinsfashion2025@gmail.com"
+                href="mailto:care@pskinteriors.com"
                 aria-label="Email Us"
                 className="flex items-center gap-2 hover:underline"
               >
@@ -110,7 +110,7 @@ const Footer = () => {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                info@pskwoodworks.com
+                care@pskinteriors.com
               </Link>
             </li>
           </ul>
@@ -186,8 +186,8 @@ const Footer = () => {
           Privacy Policy <span className="px-1">|</span> Terms of Use
         </p>
         <p>
-          © 2025 pskwoodworks.in <span className="px-1">|</span> All Rights
-          Reserved.
+          © 2025 pskinteriors.in <span className="px-1">|</span> All rights
+          reserved.
         </p>
       </div>
     </footer>
