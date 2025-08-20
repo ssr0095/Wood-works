@@ -2,6 +2,7 @@ import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { assets } from "@/public/assets/assets";
+import Image from "next/image";
 
 const About = () => {
   const process = [
@@ -96,7 +97,7 @@ const About = () => {
               {/* </div>  */}
             </div>
             <div className="flex items-center justify-center relative z-0">
-              <img
+              <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"
@@ -106,7 +107,7 @@ const About = () => {
           </div>
           <div className="w-full justify-between items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
             <div className="flex items-center justify-center relative z-0">
-              <img
+              <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"
@@ -148,7 +149,7 @@ const About = () => {
               {/* </div>  */}
             </div>
             <div className="flex items-center justify-center relative z-0">
-              <img
+              <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"

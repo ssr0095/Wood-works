@@ -32,7 +32,7 @@ const Service = ({ image, name, description }: ServiceType) => {
         />
 
         {/* {image[1] && (
-          <img
+          <Image
             src={image[1]}
             alt="Hover"
             loading="lazy"
