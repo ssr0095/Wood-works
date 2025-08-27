@@ -27,10 +27,15 @@ const buttonVariants = cva(
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
       },
+      ripple: {
+        default: "btn-ripple",
+        none: "",
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      ripple: "default",
     },
   }
 );
@@ -40,6 +45,7 @@ function Button({
   variant,
   size,
   asChild = false,
+  ripple,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
@@ -66,7 +72,10 @@ function Button({
     <Comp
       data-slot="button"
       onClick={handleClick}
-      className={cn("btn-ripple relative overflow-hidden", buttonVariants({ variant, size, className }))}
+      className={cn(
+        "relative overflow-hidden",
+        buttonVariants({ variant, size, className, ripple })
+      )}
       {...props}
     />
   );

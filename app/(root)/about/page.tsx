@@ -12,7 +12,7 @@ const About = () => {
         one: "We start by listening to your ideas, preferences, and requirements.",
         two: "Our team visits your space(if required) to understand dimensions and possibilities.",
       },
-      bg: assets.bg_star_dark,
+      bg: assets.bgStarDark,
     },
     {
       title: "Design & Planning",
@@ -20,7 +20,7 @@ const About = () => {
         one: "Based on your vision, we create practical design options that blend aesthetics with functionality.",
         two: "Material choices, layouts, and finishes are discussed openly to suit your style and budget.",
       },
-      bg: assets.bg_star_dark,
+      bg: assets.bgStarDark,
     },
     {
       title: "Execution & Craftsmanship",
@@ -28,7 +28,7 @@ const About = () => {
         one: "Once finalized, our skilled carpenters and fabricators get to work.",
         two: "We use high- quality wood, aluminium, and POP to ensure durability and long- lasting results.",
       },
-      bg: assets.bg_star_dark,
+      bg: assets.bgStarDark,
     },
     {
       title: "Quality Check & Finishing Touches",
@@ -36,7 +36,7 @@ const About = () => {
         one: "Every detail is carefully inspected to ensure precision.",
         two: "We focus on smooth finishes, perfect fittings, and a flawless look.",
       },
-      bg: assets.bg_star_dark,
+      bg: assets.bgStarDark,
     },
     {
       title: "Handover & Support",
@@ -44,14 +44,14 @@ const About = () => {
         one: "We hand over your transformed space on time.",
         two: "Our team remains available for after-service support whenever you need it.",
       },
-      bg: assets.bg_star_dark,
+      bg: assets.bgStarDark,
     },
   ];
 
   return (
     <>
       {/* Hero */}
-      <section className="w-full h-[30vh] md:h-[50vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
+      <section className="w-full h-[30vh] md:h-[50vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
         <h1 className="text-3xl z-20 md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
           About Us
         </h1>
@@ -72,7 +72,7 @@ const About = () => {
         </div>
       </section>
       {/* Working process */}
-      <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-16 bg-cover dark:bg-center bg-[url(/assets/images/blur-bg-01.png)] dark:bg-[url(/assets/images/stacked-steps-01-dark-blur.webp)]">
+      <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-16 bg-cover dark:bg-center bg-[url(/assets/images/background/blur-bg-01.png)] dark:bg-[url(/assets/images/background/stacked-steps-01-dark-blur.webp)]">
         <div className="w-full flex items-center justify-center">
           <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
             Our process
@@ -101,6 +101,8 @@ const About = () => {
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"
+                width={256}
+                height={192}
               />
               {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
             </div>
@@ -111,6 +113,8 @@ const About = () => {
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"
+                width={256}
+                height={192}
               />
               {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
             </div>
@@ -153,6 +157,8 @@ const About = () => {
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
                 src="/assets/images/donet.webp"
                 alt="about Us image"
+                width={256}
+                height={192}
               />
               {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
             </div>
@@ -179,7 +185,7 @@ const About = () => {
             {process.map((feature, index) => (
               <div
                 key={index}
-                className="grid max-md:grid-rows-[65px_1fr] md:grid-cols-[75px_1fr] p-6 rounded-xl border bg-background dark:bg-[url('/assets/images/bg-star-dark.svg')]"
+                className="grid max-md:grid-rows-[65px_1fr] md:grid-cols-[75px_1fr] p-6 rounded-xl border bg-[url('/assets/images/background/bg-star.svg')] dark:bg-[url('/assets/images/background/dark-star-pattern-bg.svg')]"
               >
                 <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4">
                   {index + 1 + "."}

@@ -1,4 +1,4 @@
-import { assets, categoryList } from "@/public/assets/assets";
+import { assets, servicesNav } from "@/public/assets/assets";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
@@ -7,9 +7,9 @@ import Link from "next/link";
 const Footer = () => {
   // const theme = themeList.slice(0, 4);
   return (
-    <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 bg-[url(/assets/images/bg-wave.svg)] dark:bg-[url(/assets/images/bg-wave-dark.svg)]">
+    <footer className="z-0 relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] border-t mt-40 cursor-default bg-[url(/assets/images/background/bg-wave.svg)] dark:bg-[url(/assets/images/background/bg-wave-dark.svg)]">
       <div className="my-6 z-10">
-        {/* <Link href="/" className="flex items-center gap-3"> */}
+        {/* <Link className="hover:underline" href="/" className="flex items-center gap-3"> */}
         <Image
           src={assets.logo}
           width={32}
@@ -32,16 +32,19 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <Link href="/">Home</Link>
+              <Link className="hover:underline" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About us</Link>
+              <Link className="hover:underline" href="/about">
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/collection">Collection</Link>
-            </li>
-            <li>
-              <Link href="#">Privacy policy</Link>
+              <Link className="hover:underline" href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -51,9 +54,14 @@ const Footer = () => {
             SERVICES
           </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
-            {categoryList.map((item) => (
-              <li key={item}>
-                <Link href="/collection">{item}</Link>
+            {servicesNav.map((item, index) => (
+              <li key={index}>
+                <Link
+                  className="hover:underline"
+                  href={`/services/${item.key}`}
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -63,30 +71,31 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">LEGAL</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <Link href="#">Privacy policy</Link>
+              <Link className="hover:underline" href="#">
+                Privacy policy
+              </Link>
             </li>
             <li>
-              <Link href="#">Terms & Conditions</Link>
-            </li>
-            <li>
-              <Link href="#">Shipping Policy</Link>
+              <Link className="hover:underline" href="#">
+                Terms & Conditions
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="text-xl font-medium text-foreground/95 mb-5">
-            NEED HELP?
+            CONTACT US
           </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
               <Link
                 className="flex items-center gap-2 hover:underline"
                 // alt="whatsapp"
-                href="https://wa.me/8248586654?text=Hey!%20I%20saw%20your%20collection%20and%20loved%20it.%20Can%20you%20help%20me%20with%20sizes%20and%20pricing?"
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_LINK}?text=${process.env.NEXT_PUBLIC_WHATSAPP_TEXT}`}
               >
                 <Phone className="w-4" />
-                +91 98945-96902
+                {process.env.NEXT_PUBLIC_PHONE_TEXT}
               </Link>
             </li>
             <li>
@@ -121,30 +130,20 @@ const Footer = () => {
             INSTAGRAM
           </p>
           <Link
-            href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
+            href={`${process.env.NEXT_PUBLIC_INSTAGRAM_LINK}`}
             target="_blank"
             className="w-fit grid grid-cols-2 gap-4"
           >
-            <Image
-              src={assets.logo}
-              alt="instgram image 1"
-              className="max-w-16"
-            />
-            <Image
-              src={assets.logo}
-              alt="instgram image 2"
-              className="max-w-16"
-            />
-            <Image
-              src={assets.logo}
-              alt="instgram image 3"
-              className="max-w-16"
-            />
-            <Image
-              src={assets.logo}
-              alt="instgram image 4"
-              className="max-w-16"
-            />
+            {servicesNav.slice(0, 4).map((item, index) => (
+              <Image
+                key={index}
+                src={item.src}
+                alt={`instagram image - ${item.alt}`}
+                className="size-16 object-center object-cover overflow-hidden"
+                width={64}
+                height={64}
+              />
+            ))}
           </Link>
         </div>
       </div>
@@ -154,7 +153,7 @@ const Footer = () => {
         <ul className="flex items-center text-foreground/70">
           <li>
             <Link
-              href="https://www.instagram.com/cousins_.fashion?igsh=aGZmaXRpNmJ2NWQ2"
+              href={`${process.env.NEXT_PUBLIC_INSTAGRAM_LINK}`}
               className="p-2"
               // alt="instagram"
               aria-label="follow on instagram"
@@ -182,12 +181,14 @@ const Footer = () => {
 
       <Separator />
       <div className="w-full flex items-center justify-center sm:justify-between py-5 text-xs text-muted-foreground">
-        <p className="max-sm:hidden">
-          Privacy Policy <span className="px-1">|</span> Terms of Use
-        </p>
+        <div className="max-sm:hidden flex items-center">
+          <p className="hover:underline">Privacy Policy</p>{" "}
+          <span className="px-1">|</span>{" "}
+          <p className="hover:underline">Terms of Use</p>
+        </div>
         <p>
-          © 2025 pskinteriors.in <span className="px-1">|</span> All rights
-          reserved.
+          © 2025 {process.env.NEXT_PUBLIC_FRONTEND_URL}{" "}
+          <span className="px-1">|</span> All rights reserved.
         </p>
       </div>
     </footer>

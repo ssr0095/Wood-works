@@ -1,7 +1,7 @@
 import { AlarmCheck, Cog, Hammer, Leaf } from "lucide-react";
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { exp_info } from "@/public/assets/assets";
+import { experienceInfo } from "@/public/assets/assets";
 
 const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
   const features = [
@@ -66,7 +66,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-accent rounded-xl p-4">
-          {exp_info.map((stat, index) => (
+          {experienceInfo.map((stat, index) => (
             <div key={index} className="text-center p-4">
               <div className="mb-2">
                 <h3 className="text-4xl font-extrabold text-primary">

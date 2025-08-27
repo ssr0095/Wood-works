@@ -1,75 +1,38 @@
 "use client";
 import Link from "next/link";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 type ServiceType = {
   image: StaticImageData;
-  name: string;
+  title: string;
   description: string;
+  link: string;
 };
 
-const Service = ({ image, name, description }: ServiceType) => {
-  const ServiceCard = (
-    <Card className="">
-      <CardHeader>
-        <Image
-          src={image}
-          alt={`${name} image`}
-          className={
-            "rounded-t-2xl w-full h-full pb-4 aspect-4/3 object-cover object-center transition duration-300"
-          }
-          // ${
-          // image[1] && "group-hover:opacity-0"
-          // }`}
-        />
-
-        {/* {image[1] && (
-          <Image
-            src={image[1]}
-            alt="Hover"
-            loading="lazy"
-            className="absolute top-0 left-0 w-full h-full object-cover transition duration-300 opacity-0 group-hover:opacity-100"
-          />
-        )} */}
-
-        {/* <p className="w-fit mt-1 px-2 bg-blue-50 border border-blue-200 text-gray-800 text-sm">
-        {tag}
-      </p> */}
-
-        <CardTitle>{name}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-
-      <CardFooter>
-        <Button>See more</Button>
-      </CardFooter>
-    </Card>
-    // <div className="relative h-[60vh] from-accent/50 to-muted bg-linear-to-b z-0 group  transition-all duration-300">
-    //   <Image
-    //       src={image}
-    //       alt={`${name} image`}
-    //       className={"absolute top-0 left-0 aspect-4/3 object-cover object-center transition duration-300 -z-0" }
-    //     />
-    //   <div className="z-10 p-4 backdrop-blur-2xl border-2 rounded-2xl  transition-all">
-    //     <h1>{name}</h1>
-    //     <p className="hidden group-hover:block transition-all duration-300">{description}</p>
-    //   </div>
-    //   <Button>See more</Button>
-    // </div>
-  );
+const ServiceCard = ({ title, description, image, link }: ServiceType) => {
   return (
-    <Link href={`/services`} onClick={() => scrollTo(0, 0)}>
-      {ServiceCard}
+    <Link href={`/services/${link}`} onClick={() => scrollTo(0, 0)}>
+      <Card className="group hover:shadow-lg transition-shadow">
+        <div className="overflow-hidden rounded-t-lg">
+          <Image
+            src={image}
+            alt={title}
+            className="group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <CardContent className="p-6">
+          <h3 className="font-semibold text-xl mb-2">{title}</h3>
+          <p className="text-gray-600 mb-4">{description}</p>
+          <Button variant="outline" className="w-full">
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </CardContent>
+      </Card>
     </Link>
   );
 };
 
-export default Service;
+export default ServiceCard;

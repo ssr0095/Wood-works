@@ -1,4 +1,5 @@
 "use client";
+import ContactDrawer from "./ContactDrawer";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
@@ -8,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-[90vh] overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-[url(/assets/images/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/stacked-peaks-04-dark-noise.webp)]"
+        className="absolute inset-0 bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)]"
         // style={{ backgroundImage: "url(/assets/images/stacked-peaks-05.svg)" }}
       />
       {/* Content */}
@@ -34,14 +35,16 @@ const Hero = () => {
             >
               Explore Our Services
             </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              className="border-2 border-white text-white "
-              onClick={() => router.push("/contact")}
-            >
-              Get Free Quote
-            </Button>
+
+            <ContactDrawer>
+              <Button
+                variant="ghost"
+                size="lg"
+                className="border-2 border-white text-white "
+              >
+                Get Free Quote
+              </Button>
+            </ContactDrawer>
           </div>
         </div>
 

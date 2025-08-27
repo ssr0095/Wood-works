@@ -1,158 +1,838 @@
-import wood1 from "@/public/assets/images/img_01.jpg";
-import wood2 from "@/public/assets/images/img_02.jpg";
-import wood3 from "@/public/assets/images/img_03.jpg";
-import wood4 from "@/public/assets/images/img_04.jpg";
-import wood5 from "@/public/assets/images/img_05.jpg";
-import wood6 from "@/public/assets/images/img_06.jpg";
-import wood7 from "@/public/assets/images/img_07.jpg";
-import wood8 from "@/public/assets/images/img_08.jpg";
-import wood9 from "@/public/assets/images/img_09.jpg";
-import wood10 from "@/public/assets/images/img_10.jpg";
-import wood11 from "@/public/assets/images/img_11.jpg";
-import logo from "@/public/assets/images/donet.webp";
-import bg_star_dark from "@/public/assets/images/bg-star-dark.svg";
+import logo from "@/public/assets/images/psk-interior-design-logo.webp";
+import bgStarDark from "@/public/assets/images/background/dark-star-pattern-bg.svg";
+
+// Bedroom Images
+import luxuryMasterBedroom from "@/public/assets/images/services/bedroom/luxury-master-bedroom-design.webp";
+import modernBedroomInterior from "@/public/assets/images/services/bedroom/modern-bedroom-interior-design.webp";
+
+// False Ceiling Images
+import curvedPopCeilingDesign from "@/public/assets/images/services/ceiling/curved-pop-ceiling-design.webp";
+import woodenCeilingWithLighting from "@/public/assets/images/services/ceiling/wooden-ceiling-lighting-design.webp";
+import geometricPopCeiling from "@/public/assets/images/services/ceiling/geometric-pop-ceiling-pattern.webp";
+import layeredCeilingDesign from "@/public/assets/images/services/ceiling/layered-ceiling-design-lighting.webp";
+import contemporaryCeilingPop from "@/public/assets/images/services/ceiling/contemporary-ceiling-pop-design.webp";
+import darkWoodCeilingDesign from "@/public/assets/images/services/ceiling/dark-wood-ceiling-design.webp";
+import artisticWoodCeiling from "@/public/assets/images/services/ceiling/artistic-wood-ceiling-pattern.webp";
+import minimalistGrayWhiteCeiling from "@/public/assets/images/services/ceiling/minimalist-gray-white-ceiling.webp";
+
+// Dining Room Images
+import modernDiningRoomDesign from "@/public/assets/images/services/dinning-room/modern-dining-room-design.webp";
+import elegantDiningInterior from "@/public/assets/images/services/dinning-room/elegant-dining-room-interior.webp";
+
+// Modular Kitchen Images
+import contemporaryIslandKitchen from "@/public/assets/images/services/modular-kitchen/contemporary-island-kitchen.webp";
+import minimalistUShapeKitchen from "@/public/assets/images/services/modular-kitchen/minimalist-u-shape-kitchen.webp";
+import modernLShapeKitchen from "@/public/assets/images/services/modular-kitchen/modern-l-shape-kitchen.webp";
+import premiumIslandBreakfastCounter from "@/public/assets/images/services/modular-kitchen/premium-island-breakfast-counter.webp";
+import spaceEfficientParallelKitchen from "@/public/assets/images/services/modular-kitchen/space-efficient-parallel-kitchen.webp";
+import classicUShapeWoodAccents from "@/public/assets/images/services/modular-kitchen/classic-u-shape-wood-accents.webp";
+import twoToneParallelDesign from "@/public/assets/images/services/modular-kitchen/two-tone-parallel-kitchen-design.webp";
+import compactLShapeSolution from "@/public/assets/images/services/modular-kitchen/compact-l-shape-kitchen-solution.webp";
+import sleekMonochromeParallel from "@/public/assets/images/services/modular-kitchen/sleek-monochrome-parallel-kitchen.webp";
+import warmIslandOpenShelving from "@/public/assets/images/services/modular-kitchen/warm-island-open-shelving-kitchen.webp";
+// import luxuryModularKitchenDesign from "@/public/assets/images/services/modular-kitchen/luxury-modular-kitchen-design.webp";
+// import smartKitchenStorage from "@/public/assets/images/services/modular-kitchen/smart-kitchen-storage-solution.webp";
+
+// Home Office Images
+// import modernHomeOfficeDesign from "@/public/assets/images/services/office/modern-home-office-design.webp";
+// import executiveOfficeInterior from "@/public/assets/images/services/office/executive-office-interior-design.webp";
+// import contemporaryWorkspaceDesign from "@/public/assets/images/services/office/contemporary-workspace-design.webp";
+// import professionalOfficeSetup from "@/public/assets/images/services/office/professional-office-setup.webp";
+import ergonomicOfficeDesign from "@/public/assets/images/services/office/ergonomic-office-design.webp";
+import luxuryOfficeInterior from "@/public/assets/images/services/office/luxury-office-interior-design.webp";
+// import minimalistOfficeSpace from "@/public/assets/images/services/office/minimalist-office-space-design.webp";
+// import creativeWorkspaceDesign from "@/public/assets/images/services/office/creative-workspace-design.webp";
+// import smartOfficeStorage from "@/public/assets/images/services/office/smart-office-storage-solutions.webp";
+
+// Space Saving Designs
+// import compactSpaceSavingDesign from "@/public/assets/images/services/space-saving/compact-space-saving-design.webp";
+import multiPurposeStorageSolution from "@/public/assets/images/services/space-saving/multi-purpose-storage-solution.webp";
+// import intelligentSpaceUtilization from "@/public/assets/images/services/space-saving/intelligent-space-utilization.webp";
+import foldableSpaceSavingFurniture from "@/public/assets/images/services/space-saving/foldable-space-saving-furniture.webp";
+// import verticalSpaceOptimization from "@/public/assets/images/services/space-saving/vertical-space-optimization.webp";
+import modularSpaceSavingSolution from "@/public/assets/images/services/space-saving/modular-space-saving-solution.webp";
+// import hiddenStorageDesign from "@/public/assets/images/services/space-saving/hidden-storage-space-design.webp";
+
+// TV Unit Images
+import illuminatedDualToneTvWall from "@/public/assets/images/services/tv-unit/illuminated-dual-tone-tv-wall.webp";
+import luxuryCarvedAccentWallUnit from "@/public/assets/images/services/tv-unit/luxury-carved-accent-wall-unit.webp";
+import monochromeFullWallEntertainment from "@/public/assets/images/services/tv-unit/monochrome-full-wall-entertainment.webp";
+import contemporaryLivingRoomMediaWall from "@/public/assets/images/services/tv-unit/contemporary-living-room-media-wall.webp";
+import marbleTexturedFloatingUnit from "@/public/assets/images/services/tv-unit/marble-textured-floating-tv-unit.webp";
+import dramaticBlackEntertainmentWall from "@/public/assets/images/services/tv-unit/dramatic-black-entertainment-wall.webp";
+
+// Wall Design Images
+import texturedWallDesignPattern from "@/public/assets/images/services/wall/textured-wall-design-pattern.webp";
+import decorativeWallPaneling from "@/public/assets/images/services/wall/decorative-wall-paneling-design.webp";
+// import modernWallTreatmentDesign from "@/public/assets/images/services/wall/modern-wall-treatment-design.webp";
+// import luxuryWallFinishDesign from "@/public/assets/images/services/wall/luxury-wall-finish-design.webp";
+// import artisticWallDecorativePanel from "@/public/assets/images/services/wall/artistic-wall-decorative-panel.webp";
+
+// Wardrobe Images
+import designerSlidingWardrobeDressing from "@/public/assets/images/services/wardrobe/designer-sliding-wardrobe-dressing.webp";
+import luxuryWalkInMasterCloset from "@/public/assets/images/services/wardrobe/luxury-walk-in-master-closet.webp";
+import premium6DoorHingedWardrobe from "@/public/assets/images/services/wardrobe/premium-6-door-hinged-wardrobe.webp";
+import minimalistDarkWoodStorage from "@/public/assets/images/services/wardrobe/minimalist-dark-wood-storage.webp";
+import cleanSlidingWardrobeDesign from "@/public/assets/images/services/wardrobe/clean-sliding-wardrobe-design.webp";
+import compactWhiteStorageSolution from "@/public/assets/images/services/wardrobe/compact-white-storage-solution.webp";
+import colorfulKidsStudyWardrobe from "@/public/assets/images/services/wardrobe/colorful-kids-study-wardrobe.webp";
+import bifoldDoorDarkWoodWardrobe from "@/public/assets/images/services/wardrobe/bifold-door-dark-wood-wardrobe.webp";
+import contemporaryIlluminatedWardrobe from "@/public/assets/images/services/wardrobe/contemporary-illuminated-wardrobe.webp";
+import lightWood4DoorWardrobe from "@/public/assets/images/services/wardrobe/light-wood-4-door-wardrobe.webp";
+import oliveCreamDesignerWardrobe from "@/public/assets/images/services/wardrobe/olive-cream-designer-wardrobe.webp";
+
+// Window Images
+import modernWindowDesignSolution from "@/public/assets/images/services/windows/modern-window-design-solution.webp";
+import energyEfficientWindowSystem from "@/public/assets/images/services/windows/energy-efficient-window-system.webp";
+import stylishWindowTreatmentDesign from "@/public/assets/images/services/windows/stylish-window-treatment-design.webp";
+
+// Aluminium Partition Images
+import premiumBlackFrameGlassPartition from "@/public/assets/images/services/aluminium/premium-black-frame-glass-partition.webp";
+import naturalAluminiumOfficePartition from "@/public/assets/images/services/aluminium/natural-aluminium-office-partition.webp";
+import frostedGlassPrivacyPartition from "@/public/assets/images/services/aluminium/frosted-glass-privacy-partition.webp";
+import doubleGlazedAcousticPartition from "@/public/assets/images/services/aluminium/double-glazed-acoustic-partition.webp";
+import slidingGlassPartitionWall from "@/public/assets/images/services/aluminium/sliding-glass-partition-wall.webp";
+
+// Door Images
+import premiumWoodenDoorDesign from "@/public/assets/images/services/door/premium-wooden-door-design.webp";
+import modernInteriorDoorSolution from "@/public/assets/images/services/door/modern-interior-door-solution.webp";
+import luxuryDoorDesignCollection from "@/public/assets/images/services/door/luxury-door-design-collection.webp";
+
+// Pooja Room Images
+import traditionalPoojaRoomDesign from "@/public/assets/images/services/pooja-room/traditional-pooja-room-design.webp";
+import modernPoojaRoomInterior from "@/public/assets/images/services/pooja-room/modern-pooja-room-interior.webp";
+
+// Navigation Images (SEO optimized names)
+import kitchenNavPreview from "@/public/assets/images/services/Nav/modular-kitchen-preview.webp";
+import aluminiumNavPreview from "@/public/assets/images/services/Nav/aluminium-partition-preview.webp";
+import bedroomNavPreview from "@/public/assets/images/services/Nav/bedroom-preview.webp";
+import ceilingNavPreview from "@/public/assets/images/services/Nav/ceiling-preview.webp";
+import diningNavPreview from "@/public/assets/images/services/Nav/dining-room-preview.webp";
+import doorNavPreview from "@/public/assets/images/services/Nav/door-preview.webp";
+import officeNavPreview from "@/public/assets/images/services/Nav/office-preview.webp";
+import poojaNavPreview from "@/public/assets/images/services/Nav/pooja-room-preview.webp";
+import spaceSavingNavPreview from "@/public/assets/images/services/Nav/space-saving-preview.webp";
+import tvNavPreview from "@/public/assets/images/services/Nav/tv-unit-preview.webp";
+import wardrobeNavPreview from "@/public/assets/images/services/Nav/wardrobe-preview.webp";
+import windowNavPreview from "@/public/assets/images/services/Nav/window-preview.webp";
+import wallNavPreview from "@/public/assets/images/services/Nav/wall-preview.webp";
+import { StaticImageData } from "next/image";
+
 export const assets = {
-  wood1,
-  wood2,
-  wood3,
-  wood4,
-  wood5,
-  wood6,
-  wood7,
-  wood8,
-  wood9,
-  wood10,
-  wood11,
   logo,
-  bg_star_dark,
+  bgStarDark,
+  texturedWallDesignPattern,
+  decorativeWallPaneling,
+  luxuryMasterBedroom,
+  modernBedroomInterior,
+  ergonomicOfficeDesign,
+  luxuryOfficeInterior,
+  modernDiningRoomDesign,
+  elegantDiningInterior,
+  modularSpaceSavingSolution,
+  multiPurposeStorageSolution,
+  traditionalPoojaRoomDesign,
+  modernPoojaRoomInterior,
+  modernInteriorDoorSolution,
+  luxuryDoorDesignCollection,
+  modernWindowDesignSolution,
+  stylishWindowTreatmentDesign,
 };
 
 export const navMenu = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  {
+    name: "Home",
+    href: "/",
+    seoTitle: "Home - Donet Interiors | Premium Interior Design Services",
+  },
+  {
+    name: "Services",
+    href: "/services",
+    seoTitle:
+      "Interior Design Services - Modular Kitchen, Wardrobes, False Ceiling",
+  },
+  {
+    name: "Gallery",
+    href: "/gallery",
+    seoTitle: "Interior Design Gallery - View Our Premium Projects Portfolio",
+  },
+  {
+    name: "About",
+    href: "/about",
+    seoTitle: "About Donet Interiors - 25+ Years Interior Design Experience",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+    seoTitle:
+      "Contact Us - Interior Design Consultation in Coimbatore, Tiruppur, Erode",
+  },
+] as const;
+
+export const experienceInfo = [
+  {
+    value: "25+",
+    label: "Years Experience",
+    // description: "Over 25 years of expertise in premium interior design",
+    // icon: "experience",
+  },
+  {
+    value: "1500+",
+    label: "Projects Completed",
+    // description: "Successfully completed over 1500 interior design projects",
+    icon: "projects",
+  },
+  {
+    value: "100%",
+    label: "Client Satisfaction",
+    // description: "100% client satisfaction with our interior design services",
+    // icon: "satisfaction",
+  },
+  {
+    value: "25+",
+    label: "Master Craftsmen",
+    // description: "Team of 25+ skilled craftsmen and interior designers",
+    // icon: "team",
+  },
+] as const;
+
+export const services = [
+  // Modular Kitchen
+  {
+    category: "Modular Kitchen",
+    key: "modular-kitchen",
+    description:
+      "Transform your kitchen into a culinary masterpiece with our expertly crafted modular solutions. From space-saving designs to luxurious layouts, we create kitchens that blend functionality with stunning aesthetics, tailored to your cooking style and home requirements.",
+    items: [
+      {
+        id: 1,
+        name: "Contemporary Island Kitchen",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: contemporaryIslandKitchen,
+      },
+      {
+        id: 2,
+        name: "Minimalist U-Shape Kitchen",
+        description:
+          "Clean medium gray finish with white quartz countertops and open shelving elements. Ideal for compact spaces requiring maximum functionality without visual clutter.",
+        image: minimalistUShapeKitchen,
+      },
+      {
+        id: 3,
+        name: "Modern L-Shape Kitchen",
+        description:
+          "Bold black and modern gray combination with glossy granite surfaces. Features extensive cabinet storage and ambient lighting for sophisticated culinary experiences.",
+        image: modernLShapeKitchen,
+      },
+      {
+        id: 4,
+        name: "Premium Island with Breakfast Counter",
+        description:
+          "Elegant black and light wood design featuring black granite countertops. Combines glass-front cabinets with striped wood panels and integrated breakfast seating.",
+        image: premiumIslandBreakfastCounter,
+      },
+      {
+        id: 5,
+        name: "Space-Efficient Parallel Kitchen",
+        description:
+          "Smart white and forest green layout with pristine white granite surfaces. Maximizes storage in narrow spaces while maintaining clean, contemporary aesthetics.",
+        image: spaceEfficientParallelKitchen,
+      },
+      {
+        id: 6,
+        name: "Classic U-Shape with Wood Accents",
+        description:
+          "Timeless white base enhanced with warm light wood elements and white granite countertops. Creates a welcoming, family-friendly cooking environment with ample workspace.",
+        image: classicUShapeWoodAccents,
+      },
+      {
+        id: 7,
+        name: "Two-Tone Parallel Design",
+        description:
+          "Rich dark wood upper cabinets paired with warm sandal cream base units. Features coordinated wood and cream color palette for sophisticated, layered visual appeal.",
+        image: twoToneParallelDesign,
+      },
+      {
+        id: 8,
+        name: "Compact L-Shape Solution",
+        description:
+          "Light wood finish optimized for smaller kitchens with intelligent space-saving features. Delivers essential functionality while maintaining an open, uncluttered feel.",
+        image: compactLShapeSolution,
+      },
+      {
+        id: 9,
+        name: "Sleek Monochrome Parallel",
+        description:
+          "Bold charcoal black design with strategic LED lighting accents. Creates dramatic, modern ambiance perfect for contemporary homes seeking striking visual impact.",
+        image: sleekMonochromeParallel,
+      },
+      {
+        id: 10,
+        name: "Warm Island with Open Shelving",
+        description:
+          "Inviting orange-toned wood paired with crisp white elements and marble surfaces. Features breakfast counter seating and open shelving for display and easy access storage.",
+        image: warmIslandOpenShelving,
+      },
+    ],
+  },
+  // Wardrobe
+  {
+    category: "Wardrobes & Storage Solutions",
+    key: "wardrobes",
+    description:
+      "Maximize your storage potential with our custom-designed wardrobes that seamlessly blend organization with style. From walk-in closets to space-saving solutions, we craft storage systems that accommodate your lifestyle while enhancing your bedroom's aesthetic appeal.",
+    items: [
+      {
+        id: 1,
+        name: "Designer Sliding Wardrobe with Dressing Unit",
+        description:
+          "Elegant 4-door sliding system in warm beige featuring glass panel doors and integrated dressing station. Combines closed storage with open display shelving for versatile organization.",
+        image: designerSlidingWardrobeDressing,
+      },
+      {
+        id: 2,
+        name: "Luxury Walk-In Master Closet",
+        description:
+          "Full-height gray wood walk-in wardrobe with comprehensive storage zones including open shelving, enclosed compartments, loft storage, and premium drawer systems for ultimate organization.",
+        image: luxuryWalkInMasterCloset,
+      },
+      {
+        id: 3,
+        name: "Premium 6-Door Hinged Wardrobe",
+        description:
+          "Sophisticated gray doors with copper-striped textured panels and glass accents. Features integrated dressing unit and loft storage with full-height design for maximum capacity.",
+        image: premium6DoorHingedWardrobe,
+      },
+      {
+        id: 4,
+        name: "Minimalist Dark Wood Storage",
+        description:
+          "Space-efficient dark wood design combining open display areas with practical drawer systems. Perfect for modern bedrooms requiring clean lines and optimal storage density.",
+        image: minimalistDarkWoodStorage,
+      },
+      {
+        id: 5,
+        name: "Clean Sliding Wardrobe",
+        description:
+          "Sleek 3-door sliding system in pristine off-white finish. Minimalist full-height design ideal for contemporary spaces where simplicity meets functional storage needs.",
+        image: cleanSlidingWardrobeDesign,
+      },
+      {
+        id: 6,
+        name: "Compact White Storage Solution",
+        description:
+          "Space-saving white wardrobe featuring smart open storage compartments with integrated drawers. Maximizes bedroom storage while maintaining bright, airy aesthetics.",
+        image: compactWhiteStorageSolution,
+      },
+      {
+        id: 7,
+        name: "Colorful Kids Study Wardrobe",
+        description:
+          "Vibrant 2-door sliding wardrobe with modern bright colors, combining clothing storage with study unit integration. Features open shelving and overhead loft storage for toys and books.",
+        image: colorfulKidsStudyWardrobe,
+      },
+      {
+        id: 8,
+        name: "Bi-Fold Door Dark Wood Wardrobe",
+        description:
+          "Innovative 4-door dark wood system with modern bi-fold mechanism allowing full access while saving space. Perfect for bedrooms with limited opening clearance requirements.",
+        image: bifoldDoorDarkWoodWardrobe,
+      },
+      {
+        id: 9,
+        name: "Contemporary Illuminated Wardrobe",
+        description:
+          "Stylish dark wood design with integrated LED lighting, textured striped panels, and sophisticated shelving systems. Features loft storage for premium, hotel-like bedroom ambiance.",
+        image: contemporaryIlluminatedWardrobe,
+      },
+      {
+        id: 10,
+        name: "Light Wood 4-Door Wardrobe",
+        description:
+          "Minimalist light wood finish with balanced closed and open storage zones plus drawer compartments. Offers versatile organization options while maintaining natural, Scandinavian-inspired aesthetics.",
+        image: lightWood4DoorWardrobe,
+      },
+      {
+        id: 11,
+        name: "Olive & Cream Designer Wardrobe",
+        description:
+          "Unique olive green and sandal cream combination featuring glass shutters, wood loft storage, and central decorative display space. Perfect statement piece for eclectic bedroom designs.",
+        image: oliveCreamDesignerWardrobe,
+      },
+    ],
+  },
+  // TV Unit
+  {
+    category: "TV Units & Entertainment Centers",
+    key: "tv-units",
+    description:
+      "Create stunning entertainment focal points with our custom TV units that blend seamless functionality with striking visual appeal. From floating designs to full-wall entertainment systems, we craft solutions that organize your media while elevating your living space aesthetics.",
+    items: [
+      {
+        id: 1,
+        name: "Illuminated Dual-Tone TV Wall",
+        description:
+          "Full-height entertainment system in two elegant gray shades featuring glass-shuttered display shelves with integrated LED lighting. Combines floating cabinet storage for clutter-free modern living.",
+        image: illuminatedDualToneTvWall,
+      },
+      {
+        id: 2,
+        name: "Luxury Carved Accent Wall Unit",
+        description:
+          "Sophisticated floating TV unit with textured wood-stripped wall treatment and gray-gold center accent. Features mirrored elements and display shelving for premium, hotel-inspired aesthetics.",
+        image: luxuryCarvedAccentWallUnit,
+      },
+      {
+        id: 3,
+        name: "Monochrome Full-Wall Entertainment System",
+        description:
+          "Complete charcoal gray entertainment solution with full-length wardrobe integration, floating TV mount, and matching wood-textured accent wall with dramatic backlighting effects.",
+        image: monochromeFullWallEntertainment,
+      },
+      {
+        id: 4,
+        name: "Contemporary Living Room Media Wall",
+        description:
+          "Full-length white entertainment center with floating TV unit, upper cabinets, and open display shelves. Features rich coffee-dark textured accent wall for sophisticated contrast.",
+        image: contemporaryLivingRoomMediaWall,
+      },
+      {
+        id: 5,
+        name: "Marble-Textured Floating Unit",
+        description:
+          "Elegant white-gray marble textured accent wall with centered floating TV unit and bottom cabinet storage. Light cream-pink tones create soft, luxurious ambiance perfect for refined living spaces.",
+        image: marbleTexturedFloatingUnit,
+      },
+      {
+        id: 6,
+        name: "Dramatic Black Entertainment Wall",
+        description:
+          "Bold monochrome black full-height system with textured accent wall, floating TV mount, and bottom cabinet storage. Features open shelving with strategic lighting for striking visual impact.",
+        image: dramaticBlackEntertainmentWall,
+      },
+    ],
+  },
+  // False Ceiling
+  {
+    category: "False Ceiling & POP Designs",
+    key: "false-ceiling",
+    description:
+      "Transform your interiors with sophisticated false ceiling solutions that combine aesthetic excellence with practical functionality. From elegant POP designs to modern wood finishes, we create custom ceilings that enhance lighting, conceal utilities, and add architectural depth to every room.",
+    items: [
+      {
+        id: 1,
+        name: "Multi-Layered Curved Wave Design",
+        description:
+          "Elegant off-white POP ceiling featuring flowing wave patterns with multiple layers, integrated cove and spot lighting. Creates dramatic depth and ambient illumination perfect for contemporary living spaces.",
+        image: curvedPopCeilingDesign,
+      },
+      {
+        id: 2,
+        name: "Wooden Wave Ceiling with Warm Lighting",
+        description:
+          "Sophisticated light wood-toned design with textured striped patterns and flowing wave elements. Multi-layered construction with warm cove lighting creates cozy, natural ambiance for premium interiors.",
+        image: woodenCeilingWithLighting,
+      },
+      {
+        id: 3,
+        name: "Simple Curved POP Ceiling",
+        description:
+          "Clean off-white single-layer design with graceful curved elements and strategic spot lighting. Minimalist approach perfect for bedrooms and spaces requiring subtle architectural enhancement without overwhelming the room.",
+        image: geometricPopCeiling,
+      },
+      {
+        id: 4,
+        name: "Sandal Cream Geometric Ceiling",
+        description:
+          "Multi-layered POP design in warm sandal cream with rectangular geometric patterns. Features combination of warm spot and cove lighting for sophisticated, hotel-inspired ceiling treatment.",
+        image: layeredCeilingDesign,
+      },
+      {
+        id: 5,
+        name: "Contemporary Geometric POP Design",
+        description:
+          "Modern rectangular-shaped ceiling with unique geometric patterns and dual lighting systems. Combines spot and cove lighting elements for versatile illumination control and contemporary aesthetic appeal.",
+        image: contemporaryCeilingPop,
+      },
+      {
+        id: 6,
+        name: "Premium Dark Wood Ceiling",
+        description:
+          "Luxurious full wooden ceiling in rich dark wood with glossy finish and integrated spot lighting. Creates warm, elegant atmosphere perfect for dining rooms and high-end residential spaces.",
+        image: darkWoodCeilingDesign,
+      },
+      {
+        id: 7,
+        name: "Artistic Dark Wood Design",
+        description:
+          "Custom dark wood ceiling with unique sculptural patterns and warm spot lighting integration. Combines natural wood beauty with artistic flair for statement ceiling in premium interiors.",
+        image: artisticWoodCeiling,
+      },
+      {
+        id: 8,
+        name: "Professional Gray-White Ceiling",
+        description:
+          "Contemporary gray and white rectangular design with precise square spot lighting arrangement. Clean, professional appearance ideal for modern offices and minimalist residential spaces seeking structured elegance.",
+        image: minimalistGrayWhiteCeiling,
+      },
+    ],
+  },
+  // Aluminium Fabrics
+  {
+    category: "Aluminium Partition Systems",
+    key: "aluminium-partition",
+    description:
+      "Create sophisticated, flexible spaces with our premium aluminium partition solutions that seamlessly blend functionality with contemporary design. From sleek office environments to modern residential spaces, our lightweight yet robust systems offer superior acoustic insulation and design versatility for any interior requirement.",
+    items: [
+      {
+        id: 1,
+        name: "Premium Black Frame Glass Partitions",
+        description:
+          "Elegant black aluminium framework with floor-to-ceiling glass panels, perfect for modern offices and commercial spaces. Provides excellent visibility while maintaining acoustic separation and professional aesthetics.",
+        image: premiumBlackFrameGlassPartition,
+      },
+      {
+        id: 2,
+        name: "Natural Aluminium Office Systems",
+        description:
+          "Clean, contemporary aluminium-finish partitions with tempered glass integration. Ideal for creating bright, open work environments while defining functional zones with superior durability and minimal maintenance requirements.",
+        image: naturalAluminiumOfficePartition,
+      },
+      {
+        id: 3,
+        name: "Frosted Glass Privacy Partitions",
+        description:
+          "Professional aluminium frames with frosted or etched glass panels offering privacy without compromising natural light flow. Perfect for meeting rooms, executive offices, and spaces requiring visual discretion.",
+        image: frostedGlassPrivacyPartition,
+      },
+      {
+        id: 4,
+        name: "Double-Glazed Acoustic Partitions",
+        description:
+          "Advanced aluminium systems with double-glazed panels providing exceptional sound insulation. Ideal for conference rooms, medical facilities, and environments requiring superior acoustic performance with modern aesthetics.",
+        image: doubleGlazedAcousticPartition,
+      },
+      {
+        id: 5,
+        name: "Sliding Glass Partition Walls",
+        description:
+          "Innovative sliding aluminium partition systems with smooth operation mechanisms. Create flexible spaces that can be opened or enclosed as needed, perfect for multipurpose rooms and adaptive office layouts.",
+        image: slidingGlassPartitionWall,
+      },
+    ],
+  },
 ];
 
-export const themeList = [
-  "Aesthetic",
-  "Streetwear",
-  "Minimalist",
-  "Vintage",
-  "Graphic Art",
-  "Bold & Edgy",
-  "Pastel Vibes",
-  "Typography",
-  "Quirky & Fun",
-  "Others",
-];
-export const categoryList = ["Men", "Women", "Unisex", "Kids"];
-
-export const category = [
+export const services2 = [
   {
-    id: 1,
-    name: "Aesthetics",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood1,
+    category: "Wall",
+    description: "A beautiful wall design",
+    images: [texturedWallDesignPattern, decorativeWallPaneling],
   },
   {
-    id: 2,
-    name: "Illustration",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood2,
+    category: "Bedroom",
+    description: "A cozy bedroom design",
+    images: [luxuryMasterBedroom, modernBedroomInterior],
   },
   {
-    id: 3,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood3,
+    category: "Office",
+    description: "A productive office space",
+    images: [ergonomicOfficeDesign, luxuryOfficeInterior],
   },
   {
-    id: 4,
-    name: "Aesthetics",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood4,
+    category: "Dining",
+    description: "A stylish dining area",
+    images: [modernDiningRoomDesign, elegantDiningInterior],
   },
   {
-    id: 5,
-    name: "Illustration",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood5,
+    category: "Space Saving",
+    description: "A compact space-saving design",
+    images: [multiPurposeStorageSolution, foldableSpaceSavingFurniture],
   },
   {
-    id: 6,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood6,
+    category: "Pooja Room",
+    description: "A serene pooja room design",
+    images: [traditionalPoojaRoomDesign, modernPoojaRoomInterior],
   },
   {
-    id: 7,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood7,
+    category: "Door",
+    description: "A spacious door design",
+    images: [modernInteriorDoorSolution, luxuryDoorDesignCollection],
   },
   {
-    id: 8,
-    name: "Aesthetics",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood8,
-  },
-  {
-    id: 9,
-    name: "Illustration",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood9,
-  },
-  {
-    id: 10,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood10,
-  },
-  {
-    id: 11,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood11,
-  },
-  {
-    id: 12,
-    name: "Aesthetics",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood1,
-  },
-  {
-    id: 13,
-    name: "Illustration",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    image: wood2,
-  },
-  {
-    id: 14,
-    name: "Others",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 B.",
-    image: wood3,
+    category: "Windows",
+    description: "Stylish window designs",
+    images: [modernWindowDesignSolution, energyEfficientWindowSystem],
   },
 ];
 
-export const exp_info = [
-  { value: "25+", label: "Years Experience" },
-  { value: "1500+", label: "Projects Completed" },
-  { value: "100%", label: "Client Satisfaction" },
-  { value: "25+", label: "Master Craftsmen" },
+// const locationImages = {
+//   tiruppur:
+//     "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=300&fit=crop&crop=center",
+//   coimbatore:
+//     "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop&crop=center",
+//   erode:
+//     "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=400&h=300&fit=crop&crop=center",
+// } as const;
+
+// const aboutImages = {
+//   "our-story":
+//     "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center",
+//   team: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop&crop=center",
+//   process:
+//     "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop&crop=center",
+// } as const;
+
+// type ServiceKey = keyof typeof serviceImages;
+// type LocationKey = keyof typeof locationImages;
+// type AboutKey = keyof typeof aboutImages;
+
+export const servicesNav: ServiceNavType[] = [
+  {
+    name: "Modular Kitchen",
+    href: "/services#modular-kitchen",
+    key: "modular-kitchen",
+    description:
+      "Transform your kitchen with modern designs and smart storage solutions",
+    src: kitchenNavPreview,
+    alt: "Modular Kitchen Design Services - Custom kitchen solutions in Coimbatore",
+    title: "Modular Kitchen Design - Transform Your Cooking Space",
+  },
+  {
+    name: "Wardrobes & Storage",
+    href: "/services#wardrobes",
+    key: "wardrobes",
+    description: "Custom storage solutions for every space and lifestyle need",
+    src: wardrobeNavPreview,
+    alt: "Custom Wardrobe & Storage Solutions - Bedroom storage design services",
+    title: "Custom Wardrobes & Storage - Maximize Your Space",
+  },
+  {
+    name: "TV Units",
+    href: "/services#tv-units",
+    key: "tv-units",
+    description:
+      "Entertainment centers that make a statement in your living room",
+    src: tvNavPreview,
+    alt: "TV Unit & Entertainment Center Design - Living room furniture solutions",
+    title: "TV Units & Entertainment Centers - Stylish Media Storage",
+  },
+  {
+    name: "False Ceiling & POP",
+    href: "/services#false-ceiling",
+    key: "false-ceiling",
+    description: "Elegant ceiling designs with integrated lighting solutions",
+    src: ceilingNavPreview,
+    alt: "False Ceiling & POP Designs - Architectural ceiling solutions",
+    title: "False Ceiling Design - Elegant Architectural Solutions",
+  },
+  {
+    name: "Aluminium Partitions",
+    href: "/services#aluminium-partition",
+    key: "aluminium-partition",
+    description: "Modern space division solutions for offices and homes",
+    src: aluminiumNavPreview,
+    alt: "Aluminium Partition Systems - Office and home space division solutions",
+    title: "Aluminium Partitions - Modern Space Division",
+  },
+  {
+    name: "Doors",
+    href: "/services#doors",
+    key: "doors",
+    description: "Premium door solutions for every room and style preference",
+    src: doorNavPreview,
+    alt: "Premium Door Design Solutions - Interior and exterior door services",
+    title: "Door Design Solutions - Premium Interior Doors",
+  },
+  {
+    name: "Windows",
+    href: "/services#windows",
+    key: "windows",
+    description: "Energy-efficient window systems with modern aesthetics",
+    src: windowNavPreview,
+    alt: "Premium Window Design Solutions - Interior and exterior window services",
+    title: "Window Design Solutions - Premium Interior Windows",
+  },
+  {
+    name: "Pooja Room",
+    href: "/services#pooja-room",
+    key: "pooja-room",
+    description:
+      "Sacred spaces designed with reverence and traditional elements",
+    src: poojaNavPreview,
+    alt: "Pooja Room Design - Traditional and modern prayer room interiors",
+    title: "Pooja Room Design - Sacred Space Interiors",
+  },
+  {
+    name: "Dining Room",
+    href: "/services#dining-room",
+    key: "dining-room",
+    description: "Elegant dining spaces perfect for family gatherings",
+    src: diningNavPreview,
+    alt: "Dining Room Interior Design - Elegant dining space solutions",
+    title: "Dining Room Design - Elegant Family Spaces",
+  },
+  {
+    name: "Bedroom",
+    href: "/services#bedroom",
+    key: "bedroom",
+    description: "Complete bedroom interior solutions for rest and relaxation",
+    src: bedroomNavPreview,
+    alt: "Bedroom Interior Design - Complete bedroom furniture and decor solutions",
+    title: "Bedroom Interior Design - Rest & Relaxation Spaces",
+  },
+  {
+    name: "Home Office",
+    href: "/services#home-office",
+    key: "home-office",
+    description: "Productive workspace designs for modern professionals",
+    src: officeNavPreview,
+    alt: "Home Office Design - Productive workspace interior solutions",
+    title: "Home Office Design - Productive Workspaces",
+  },
+  {
+    name: "Wall Designs",
+    href: "/services#wall",
+    key: "wall",
+    description: "Stunning wall treatments and decorative finishes",
+    src: wallNavPreview,
+    alt: "Wall Treatment Design - Decorative wall finishes and textures",
+    title: "Wall Design - Stunning Wall Treatments",
+  },
+  {
+    name: "Space Saving Designs",
+    href: "/services#space-saving",
+    key: "space-saving",
+    description: "Maximize your living space with intelligent design solutions",
+    src: spaceSavingNavPreview,
+    alt: "Space Saving Design Solutions - Intelligent furniture and storage for small spaces",
+    title: "Space Saving Design - Maximize Small Spaces",
+  },
 ];
+
+// type Location = {
+//   key: LocationKey;
+//   name: string;
+//   href: string;
+//   description: string;
+// };
+
+// type AboutItem = {
+//   key: AboutKey;
+//   name: string;
+//   href: string;
+//   description: string;
+// };
+
+// const aboutItems: AboutItem[] = [
+//   {
+//     name: "Our Story",
+//     href: "/about/story",
+//     key: "our-story",
+//     description: "Learn about our journey and vision for interior design",
+//   },
+//   {
+//     name: "Our Team",
+//     href: "/about/team",
+//     key: "team",
+//     description: "Meet the skilled professionals behind our success",
+//   },
+//   {
+//     name: "Our Process",
+//     href: "/about/process",
+//     key: "process",
+//     description: "Discover how we bring your design dreams to life",
+//   },
+// ];
+
+// SEO Schema data
+
+// export const schemaData = {
+//   organization: {
+//     "@context": "https://schema.org",
+//     "@type": "Organization",
+//     "name": "Donet Interiors",
+//     "description": "Premium interior design services specializing in modular kitchens, wardrobes, false ceiling, and complete home interiors in Coimbatore, Tiruppur, and Erode.",
+//     "url": "https://donetinteriors.com",
+//     "logo": "https://donetinteriors.com/assets/images/donet-interior-design-logo.webp",
+//     "contactPoint": {
+//       "@type": "ContactPoint",
+//       "telephone": "+91-9876543210",
+//       "contactType": "Customer Service",
+//       "areaServed": ["Coimbatore", "Tiruppur", "Erode"],
+//       "availableLanguage": ["English", "Tamil"]
+//     },
+//     "sameAs": [
+//       "https://facebook.com/donetinteriors",
+//       "https://instagram.com/donetinteriors",
+//       "https://linkedin.com/company/donetinteriors"
+//     ]
+//   },
+//   services: {
+//     "@context": "https://schema.org",
+//     "@type": "Service",
+//     "serviceType": "Interior Design Services",
+//     "provider": {
+//       "@type": "Organization",
+//       "name": "Donet Interiors"
+//     },
+//     "areaServed": {
+//       "@type": "Place",
+//       "name": ["Coimbatore", "Tiruppur", "Erode", "Tamil Nadu"]
+//     }
+//   }
+// } as const;
+
+// Location-specific data for SEO
+// export const locations = [
+//   {
+//     name: "Coimbatore",
+//     slug: "coimbatore-interior-design",
+//     seoTitle: "Interior Design Services in Coimbatore | Modular Kitchen & Home Interiors",
+//     metaDescription: "Premium interior design services in Coimbatore. Modular kitchens, wardrobes, false ceiling. 25+ years experience. Free consultation.",
+//     address: "123 Main Street, Coimbatore, Tamil Nadu",
+//     phone: "+91 9876543210",
+//     areas: ["RS Puram", "Saibaba Colony", "Race Course", "Peelamedu"],
+//   },
+//   {
+//     name: "Tiruppur",
+//     slug: "tiruppur-interior-design",
+//     seoTitle: "Interior Design Services in Tiruppur | Custom Home Solutions",
+//     metaDescription: "Expert interior design services in Tiruppur. Custom modular kitchens, wardrobes, ceiling designs. Professional team, quality assured.",
+//     address: "456 Design Street, Tiruppur, Tamil Nadu",
+//     phone: "+91 9876543211",
+//     areas: ["Avinashi Road", "Palladam Road", "Kumaran Road", "Kangeyam Road"],
+//   },
+//   {
+//     name: "Erode",
+//     slug: "erode-interior-design",
+//     seoTitle: "Interior Design Services in Erode | Premium Home Interiors",
+//     metaDescription: "Quality interior design services in Erode. Modular kitchens, storage solutions, ceiling designs. Experienced designers, modern solutions.",
+//     address: "789 Interior Lane, Erode, Tamil Nadu",
+//     phone: "+91 9876543212",
+//     areas: ["Perundurai Road", "Karur Road", "Salem Road", "Bhavani Road"],
+//   },
+// ] as const;
+
+// TYPES
+export type ServiceCategory = (typeof services)[number];
+// export type ServiceNavImageType = typeof serviceNavImages;
+export type ServiceNavType = {
+  key: string;
+  name: string;
+  href: string;
+  description: string;
+  src: StaticImageData;
+  title: string;
+  alt: string;
+};
+// export type LocationData = typeof locations[number];
+export type NavMenuItem = (typeof navMenu)[number];
+export type ListItemProps = React.ComponentPropsWithoutRef<"a"> & {
+  title: string;
+  children: React.ReactNode;
+  image?: string;
+  onHover?: () => void;
+  onLeave?: () => void;
+};

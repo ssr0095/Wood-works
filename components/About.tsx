@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-16 bg-cover dark:bg-center bg-[url(/assets/images/blur-bg-01.png)] dark:bg-[url(/assets/images/stacked-steps-01-dark-blur.webp)]">
+    <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-16 bg-cover dark:bg-center bg-[url(/assets/images/background/blur-bg-01.png)] dark:bg-[url(/assets/images/background/stacked-steps-01-dark-blur.webp)]">
       <div className="my-16">
         <div className="w-full justify-between items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
           <div className="w-full flex-col max-lg:text-center justify-start lg:items-start items-center gap-8 inline-flex">
