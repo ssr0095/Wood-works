@@ -37,13 +37,15 @@ const ContactDrawer = ({ children }: { children: ReactNode }) => {
             <div
               className="flex items-center gap-3 cursor-pointer group"
               onClick={async () => {
-                await navigator.clipboard.writeText("+91 9894796902");
+                await navigator.clipboard.writeText(
+                  `+91 ${process.env.NEXT_PUBLIC_PHONE_LINK}`
+                );
                 toast.success("Copied");
               }}
             >
               <Phone />
               <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                +91 98947-96902
+                {process.env.NEXT_PUBLIC_PHONE_TEXT}
               </div>
               <Button size="icon">
                 <Copy />
@@ -52,13 +54,15 @@ const ContactDrawer = ({ children }: { children: ReactNode }) => {
             <div
               className="flex items-center gap-3 cursor-pointer"
               onClick={async () => {
-                await navigator.clipboard.writeText("care@pskinteriors.com");
+                await navigator.clipboard.writeText(
+                  `${process.env.NEXT_PUBLIC_EMAIL}`
+                );
                 toast.success("Copied");
               }}
             >
               <Mail />
               <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                care@pskinteriors.com
+                {process.env.NEXT_PUBLIC_EMAIL}
               </div>
               <Button size="icon">
                 <Copy className="" />

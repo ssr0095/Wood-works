@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 const Contact = () => {
   const navigation = useRouter();
-  const process = [
+  const processes = [
     {
       title: "Consultation",
       description: {
@@ -91,12 +91,14 @@ const Contact = () => {
                 <div
                   className="w-full flex items-center gap-2 cursor-pointer"
                   onClick={async () => {
-                    await navigator.clipboard.writeText("+91 9894796902");
+                    await navigator.clipboard.writeText(
+                      `+91 ${process.env.NEXT_PUBLIC_PHONE_LINK}`
+                    );
                     toast.success("Copied");
                   }}
                 >
                   <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                    +91 98947-96902
+                    {process.env.NEXT_PUBLIC_PHONE_TEXT}
                   </div>
                   <Button size="icon">
                     <Copy />
@@ -112,13 +114,13 @@ const Contact = () => {
                   className="w-full flex items-center gap-2 cursor-pointer"
                   onClick={async () => {
                     await navigator.clipboard.writeText(
-                      "care@pskinteriors.com"
+                      `${process.env.NEXT_PUBLIC_EMAIL}`
                     );
                     toast.success("Copied");
                   }}
                 >
                   <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                    care@pskinteriors.com
+                    {process.env.NEXT_PUBLIC_EMAIL}
                   </div>
                   <Button size="icon">
                     <Copy />
@@ -131,7 +133,7 @@ const Contact = () => {
 
         {/* Social */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {process.map((feature, index) => (
+          {processes.map((feature, index) => (
             <Card
               key={index}
               className="py-4 hover:bg-accent/50 transition-colors cursor-pointer"

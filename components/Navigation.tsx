@@ -50,6 +50,9 @@ const MenuSection: React.FC<{
   const currentImage = hoveredItem
     ? servicesNav.find((item) => item.key === hoveredItem)?.src || defaultImage
     : defaultImage;
+  const currentAlt = hoveredItem
+    ? items.find((item) => item.key === hoveredItem)?.alt || hoveredItem
+    : title;
 
   return (
     <div className="w-xl flex items-start gap-2 p-2">
@@ -111,12 +114,7 @@ const MenuSection: React.FC<{
         <div className="w-full aspect-[3/4] rounded-sm overflow-hidden bg-muted my-2">
           <Image
             src={currentImage}
-            alt={
-              hoveredItem
-                ? items.find((item) => item.key === hoveredItem)?.alt ||
-                  hoveredItem
-                : title
-            }
+            alt={currentAlt}
             className="w-full h-full object-cover overflow-hidden transition-all duration-500"
             loading="lazy"
             // width={200}

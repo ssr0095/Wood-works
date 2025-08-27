@@ -99,7 +99,7 @@ const About = () => {
             <div className="flex items-center justify-center relative z-0">
               <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src="/assets/images/donet.webp"
+                src={assets.logo}
                 alt="about Us image"
                 width={256}
                 height={192}
@@ -111,7 +111,7 @@ const About = () => {
             <div className="flex items-center justify-center relative z-0">
               <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src="/assets/images/donet.webp"
+                src={assets.logo}
                 alt="about Us image"
                 width={256}
                 height={192}
@@ -155,7 +155,7 @@ const About = () => {
             <div className="flex items-center justify-center relative z-0">
               <Image
                 className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src="/assets/images/donet.webp"
+                src={assets.logo}
                 alt="about Us image"
                 width={256}
                 height={192}
