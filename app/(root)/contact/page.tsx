@@ -142,6 +142,7 @@ const Contact = () => {
               <CardContent className="flex items-center gap-5 px-4">
                 <div className="size-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
                   <Image
+                    placeholder="blur"
                     src={assets.logo}
                     alt="wood"
                     className="w-full object-center object-cover rounded-full"

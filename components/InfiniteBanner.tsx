@@ -23,6 +23,7 @@ const InfiniteBanner = () => {
             {[1, 2, 3, 4, 5, 6, 7].map((item, i) => (
               <li key={i}>
                 <Image
+                  placeholder="blur"
                   src={assets.logo}
                   width={32}
                   height={32}
@@ -40,6 +41,7 @@ const InfiniteBanner = () => {
             {[1, 2, 3, 4, 5, 6, 7].map((item, i) => (
               <li key={i}>
                 <Image
+                  placeholder="blur"
                   src={assets.logo}
                   width={32}
                   height={32}

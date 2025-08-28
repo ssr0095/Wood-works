@@ -33,6 +33,8 @@ const About = () => {
           </div>
           <div className="relative z-0">
             <Image
+              loading="lazy"
+              // placeholder="blur"
               className="lg:mx-0 mx-auto h-full rounded-3xl object-cover ring-4 ring-primary"
               src="https://pagedone.io/asset/uploads/1717751272.png"
               alt="about Us image"

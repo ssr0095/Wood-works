@@ -117,6 +117,7 @@ const MenuSection: React.FC<{
             alt={currentAlt}
             className="w-full h-full object-cover overflow-hidden transition-all duration-500"
             loading="lazy"
+            placeholder="blur"
             // width={200}
             // height={266}
           />

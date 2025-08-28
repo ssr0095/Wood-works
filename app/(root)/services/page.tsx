@@ -84,6 +84,7 @@ const Services = () => {
                               alt={item.name}
                               className="relative w-full aspect-3/4 object-cover hover:transform hover:scale-[1.03] transition-transform duration-400"
                               loading="lazy"
+                              placeholder="blur"
                             />
 
                             <h2 className="text-lg font-semibold text-foreground dark:text-primary-foreground mt-2">
@@ -129,14 +130,19 @@ const Services = () => {
               {/* LEFT */}
               <div className="grid gap-4 col-span-2">
                 {/* WALL */}
-                <div className="relative col-span-2 md:row-span-2 group aspect-3/4 overflow-hidden rounded-lg">
+                <div
+                  className="relative col-span-2 md:row-span-2 group aspect-3/4 overflow-hidden rounded-lg"
+                  id="wall"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.texturedWallDesignPattern}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.decorativeWallPaneling}
@@ -152,14 +158,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* DINING */}
-                <div className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg"
+                  id="dining-room"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.modernDiningRoomDesign}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-bottom transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.elegantDiningInterior}
@@ -175,14 +186,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* POOJA ROOM */}
-                <div className="relative col-span-2 group aspect-3/4 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-2 group aspect-3/4 overflow-hidden rounded-lg"
+                  id="pooja-room"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.modernPoojaRoomInterior}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.traditionalPoojaRoomDesign}
@@ -201,14 +217,19 @@ const Services = () => {
               {/* RIGHT */}
               <div className="grid gap-4 grid-cols-2 col-span-2">
                 {/* SPACE SAVE */}
-                <div className="relative col-span-1 group aspect-3/4 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-1 group aspect-3/4 overflow-hidden rounded-lg"
+                  id="space-saving"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.multiPurposeStorageSolution}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.modularSpaceSavingSolution}
@@ -224,14 +245,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* OFFICE */}
-                <div className="relative col-span-1 group aspect-3/4 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-1 group aspect-3/4 overflow-hidden rounded-lg"
+                  id="home-office"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.ergonomicOfficeDesign}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.luxuryOfficeInterior}
@@ -247,14 +273,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* BED */}
-                <div className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg"
+                  id="bedroom"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.luxuryMasterBedroom}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.modernBedroomInterior}
@@ -270,14 +301,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* DOOR */}
-                <div className="relative col-span-2 group aspect-3/4 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-2 group aspect-3/4 overflow-hidden rounded-lg"
+                  id="doors"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.modernInteriorDoorSolution}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.luxuryDoorDesignCollection}
@@ -293,14 +329,19 @@ const Services = () => {
                   </div>
                 </div>
                 {/* WINDOW */}
-                <div className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg ">
+                <div
+                  className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg"
+                  id="windows"
+                >
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
                     src={assets.modernWindowDesignSolution}
                     alt="gallery-photo"
                   />
                   <Image
+                    placeholder="blur"
                     loading="lazy"
                     className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
                     src={assets.stylishWindowTreatmentDesign}

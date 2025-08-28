@@ -200,6 +200,7 @@ export const services = [
   // Modular Kitchen
   {
     category: "Modular Kitchen",
+    "short-name": "Modular Kitchen",
     key: "modular-kitchen",
     description:
       "Transform your kitchen into a culinary masterpiece with our expertly crafted modular solutions. From space-saving designs to luxurious layouts, we create kitchens that blend functionality with stunning aesthetics, tailored to your cooking style and home requirements.",
@@ -279,6 +280,7 @@ export const services = [
   // Wardrobe
   {
     category: "Wardrobes & Storage Solutions",
+    "short-name": "Wardrobes",
     key: "wardrobes",
     description:
       "Maximize your storage potential with our custom-designed wardrobes that seamlessly blend organization with style. From walk-in closets to space-saving solutions, we craft storage systems that accommodate your lifestyle while enhancing your bedroom's aesthetic appeal.",
@@ -365,6 +367,7 @@ export const services = [
   // TV Unit
   {
     category: "TV Units & Entertainment Centers",
+    "short-name": "TV Units",
     key: "tv-units",
     description:
       "Create stunning entertainment focal points with our custom TV units that blend seamless functionality with striking visual appeal. From floating designs to full-wall entertainment systems, we craft solutions that organize your media while elevating your living space aesthetics.",
@@ -416,6 +419,7 @@ export const services = [
   // False Ceiling
   {
     category: "False Ceiling & POP Designs",
+    "short-name": "False Ceiling",
     key: "false-ceiling",
     description:
       "Transform your interiors with sophisticated false ceiling solutions that combine aesthetic excellence with practical functionality. From elegant POP designs to modern wood finishes, we create custom ceilings that enhance lighting, conceal utilities, and add architectural depth to every room.",
@@ -481,6 +485,7 @@ export const services = [
   // Aluminium Fabrics
   {
     category: "Aluminium Partition Systems",
+    "short-name": "Aluminium Partitions",
     key: "aluminium-partition",
     description:
       "Create sophisticated, flexible spaces with our premium aluminium partition solutions that seamlessly blend functionality with contemporary design. From sleek office environments to modern residential spaces, our lightweight yet robust systems offer superior acoustic insulation and design versatility for any interior requirement.",
@@ -567,6 +572,80 @@ export const services2 = [
   },
 ];
 
+export const servicesAdd = [
+  // Wall
+  {
+    category: "Wall",
+    "short-name": "Wall",
+    key: "wall",
+    description:
+      "Transform your wall into a stunning feature with our expertly crafted solutions. From textured finishes to elegant paneling, we create walls that blend functionality with stunning aesthetics, tailored to your style and home requirements.",
+    items: [
+      {
+        id: 1,
+        name: "Wall1",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: texturedWallDesignPattern,
+      },
+      {
+        id: 2,
+        name: "Wall2",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: decorativeWallPaneling,
+      },
+    ],
+  },
+  // Office
+  {
+    category: "Home Office",
+    "short-name": "Home Office",
+    key: "home-office",
+    description:
+      "Transform your home office into a stunning feature with our expertly crafted solutions. From ergonomic designs to elegant storage, we create workspaces that blend functionality with stunning aesthetics, tailored to your style and home requirements.",
+    items: [
+      {
+        id: 1,
+        name: "Office1",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: ergonomicOfficeDesign,
+      },
+      {
+        id: 2,
+        name: "Office2",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: luxuryOfficeInterior,
+      },
+    ],
+  },
+  // Bedroom
+  {
+    category: "Bed Room",
+    "short-name": "Bed Room",
+    key: "bedroom",
+    description:
+      "Transform your bedroom into a stunning feature with our expertly crafted solutions. From ergonomic designs to elegant storage, we create workspaces that blend functionality with stunning aesthetics, tailored to your style and home requirements.",
+    items: [
+      {
+        id: 1,
+        name: "Bedroom1",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: luxuryMasterBedroom,
+      },
+      {
+        id: 2,
+        name: "Bedroom2",
+        description:
+          "Spacious island design featuring light gray cabinetry with white glossy granite countertops. Perfect for entertaining with extensive storage and professional-grade lighting setup.",
+        image: modernBedroomInterior,
+      },
+    ],
+  },
+];
 // const locationImages = {
 //   tiruppur:
 //     "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=300&fit=crop&crop=center",

@@ -45,6 +45,7 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-3">
             <Image
+              placeholder="blur"
               src={assets.logo}
               width={32}
               height={32}
@@ -86,6 +87,7 @@ const Navbar = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <Image
+                      placeholder="blur"
                       src={assets.logo}
                       width={32}
                       height={32}

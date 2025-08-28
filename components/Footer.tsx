@@ -11,6 +11,7 @@ const Footer = () => {
       <div className="my-6 z-10">
         {/* <Link className="hover:underline" href="/" className="flex items-center gap-3"> */}
         <Image
+          placeholder="blur"
           src={assets.logo}
           width={32}
           height={32}
@@ -58,7 +59,7 @@ const Footer = () => {
               <li key={index}>
                 <Link
                   className="hover:underline"
-                  href={`/services/${item.key}`}
+                  href={`/services#${item.key}`}
                 >
                   {item.name}
                 </Link>
@@ -136,6 +137,8 @@ const Footer = () => {
           >
             {servicesNav.slice(0, 4).map((item, index) => (
               <Image
+                loading="lazy"
+                placeholder="blur"
                 key={index}
                 src={item.src}
                 alt={`instagram image - ${item.alt}`}
