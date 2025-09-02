@@ -1,11 +1,7 @@
 "use client";
-// import { category } from "@/public/assets/assets";
-import Service from "./Service";
 import Link from "next/link";
 import ServiceCard from "./Service";
 import { services, servicesAdd } from "@/public/assets/assets";
-// import Loading from "./ServiceCardSkeleton"
-// import { useState } from "react"
 
 const ServiceCollection = () => {
   const filter = services.concat(servicesAdd);
@@ -13,17 +9,16 @@ const ServiceCollection = () => {
     <div className="">
       {/* <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]"> */}
       <div className="my-28">
-        <div className="text-center mb-16">
+        <div className="px-4 sm:px-[5vw] text-center mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
-            Exceptional Interior work{" "}
-            <span className="text-primary">Crafted with Passion</span>
+            Complete Interior <span className="text-primary">Solutions</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-on-surface-variant">
-            We combine traditional techniques with modern innovation to deliver
-            furniture that stands the test of time.
+            From homes to offices and commercial spaces, we deliver custom
+            interiors designed to fit your needs.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">

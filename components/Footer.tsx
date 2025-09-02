@@ -1,5 +1,5 @@
-import { assets, servicesNav } from "@/public/assets/assets";
-import { Phone } from "lucide-react";
+import { assets, servicesNav, socialLinks } from "@/public/assets/assets";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
@@ -20,11 +20,9 @@ const Footer = () => {
         />
         {/* </Link> */}
         <p className="w-full md:w-11/12 text-foreground/70 text-sm">
-          CousinsFashion brings you stylish, high-quality fashion for every
-          occasion. Explore trendy clothing and accessories for men and women,
-          blending comfort with style. Shop hassle-free with easy payments, fast
-          delivery, and custom designs via WhatsApp. Dress with confidence—only
-          at CousinsFashion!
+          Ideal spaces are not just built they&apos;re designed, crafted and
+          delivered with care. At PSK Interiors, we keep things simple,
+          transparent, and tailored to your timeline.
         </p>
       </div>
       <Separator />
@@ -55,7 +53,7 @@ const Footer = () => {
             SERVICES
           </p>
           <ul className="flex flex-col gap-1 text-foreground/70">
-            {servicesNav.map((item, index) => (
+            {servicesNav?.map((item, index) => (
               <li key={index}>
                 <Link
                   className="hover:underline"
@@ -105,21 +103,7 @@ const Footer = () => {
                 aria-label="Email Us"
                 className="flex items-center gap-2 hover:underline"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-mail"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
+                <Mail className="w-4" />
                 {process.env.NEXT_PUBLIC_EMAIL}
               </Link>
             </li>
@@ -135,7 +119,7 @@ const Footer = () => {
             target="_blank"
             className="w-fit grid grid-cols-2 gap-4"
           >
-            {servicesNav.slice(0, 4).map((item, index) => (
+            {servicesNav.slice(0, 4)?.map((item, index) => (
               <Image
                 loading="lazy"
                 placeholder="blur"
@@ -152,33 +136,24 @@ const Footer = () => {
       </div>
 
       <div className="w-full flex items-center justify-end gap-1 mb-2">
-        <p className="text-sm text-foreground/95">CONNECT WITH US</p>
-        <ul className="flex items-center text-foreground/70">
-          <li>
-            <Link
-              href={`${process.env.NEXT_PUBLIC_INSTAGRAM_LINK}`}
-              className="p-2"
-              // alt="instagram"
-              aria-label="follow on instagram"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-instagram"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-            </Link>
-          </li>
+        <p className="text-sm text-foreground/95 mr-2">CONNECT WITH US</p>
+        <ul className="flex items-center text-foreground/70 gap-3">
+          {socialLinks?.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={`${item.link}`}
+                  className="flex items-center gap-1 hover:underline"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.social}
+                    className="text-white"
+                  />
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
@@ -190,7 +165,7 @@ const Footer = () => {
           <p className="hover:underline">Terms of Use</p>
         </div>
         <p>
-          © 2025 {process.env.NEXT_PUBLIC_FRONTEND_URL}{" "}
+          © 2025 {process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}{" "}
           <span className="px-1">|</span> All rights reserved.
         </p>
       </div>

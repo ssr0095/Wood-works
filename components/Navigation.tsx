@@ -68,7 +68,7 @@ const MenuSection: React.FC<{
         </div> */}
 
         <div className="grid grid-cols-2 pr-4">
-          {items.map((item) => (
+          {items?.map((item) => (
             <ListItem
               key={item.key}
               title={item.name}

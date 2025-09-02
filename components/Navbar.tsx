@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/sheet";
 import { Navigation } from "./Navigation";
 import ContactDrawer from "./ContactDrawer";
+import Banner from "./Banner";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -26,17 +27,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top announcement bar */}
-      <div className="lg:hidden w-full bg-primary py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <Link
-            href="/contact"
-            className="text-sm font-medium text-primary-foreground transition-colors"
-          >
-            Contact us now →
-          </Link>
-        </div>
-      </div>
+      {/* Banner */}
+      <Banner />
 
       {/* HEADER */}
       <header className="w-full sticky top-0 left-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -99,12 +91,12 @@ const Navbar = () => {
                 <Separator />
                 {/* Menu Items */}
                 <div className="flex flex-col px-2 gap-3">
-                  {navMenu.map((item) => (
+                  {navMenu?.map((item) => (
                     <Link
                       href={item.href}
                       key={item.name}
                       className="w-full px-4 py-2 rounded-2xl text-foreground hover:bg-accent"
-                      onClick={() => setOpen(false)} // close sheet when clicked
+                      onClick={() => setOpen(false)} // close sheet
                     >
                       {item.name}
                     </Link>
@@ -115,7 +107,12 @@ const Navbar = () => {
                   <div className="mb-4 text-sm text-foreground">
                     Ready to start your project?
                   </div>
-                  <Button onClick={() => router.push("/contact")}>
+                  <Button
+                    onClick={() => {
+                      setOpen(false);
+                      router.push("/contact");
+                    }}
+                  >
                     Get Free Estimate <ArrowRight className="size-4" />
                   </Button>
                 </SheetFooter>

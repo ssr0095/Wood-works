@@ -7,11 +7,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import { assets, services } from "@/public/assets/assets";
+import { assets, ServiceFAQ, services } from "@/public/assets/assets";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 const Services = () => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
@@ -35,19 +36,18 @@ const Services = () => {
         <div className="my-28">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
-              Exceptional Woodwork{" "}
-              <span className="text-primary">Crafted with Passion</span>
+              Crafting Everyday{" "}
+              <span className="text-primary">Spaces with Passion</span>
             </h2>
             <p className="max-w-2xl mx-auto text-lg text-on-surface-variant">
-              We combine traditional techniques with modern innovation to
-              deliver furniture that stands the test of time.
+              Essential interior solutions for homes, offices, and commercial
+              spaces—designed for beauty and built for durability.
             </p>
           </div>
         </div>
       </section>
       {/* Services */}
       <section className="my-28 select-none">
-        {/* 01 */}
         <div className="mt-20 relative" id="service-01">
           <div className="absolute size-40 top-44 right-10 bg-[url(/assets/images/leaf-1.svg)] bg-contain bg-no-repeat transform rotate-45" />
           {/* <div className="w-full h-[10vh] md:h-[20vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
@@ -56,11 +56,11 @@ const Services = () => {
             </h2>
           </div> */}
           <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
-            {services.map((service, index) => {
+            {services?.map((service, index) => {
               return (
-                <div key={index} className="mb-28" id={service.key}>
+                <div key={index} className="mb-16" id={service.key}>
                   <div className="my-10">
-                    <h2 className=" relative text-xl md:text-2xl lg:text-3xl font-bold text-foreground dark:text-primary-foreground mb-3">
+                    <h2 className=" relative text-2xl lg:text-3xl font-bold text-foreground dark:text-primary-foreground mb-3">
                       {service.category}
                     </h2>
                     <p className="max-w-4xl text-md text-foreground">
@@ -71,7 +71,7 @@ const Services = () => {
                   {/* <div className="w-full flex gap-4 items-center justify-center"> */}
                   <Carousel>
                     <CarouselContent>
-                      {service.items.map((item, index: number) => {
+                      {service.items?.map((item, index: number) => {
                         const isExpanded = expanded[service.category + index];
 
                         return (
@@ -116,6 +116,7 @@ const Services = () => {
                     <CarouselPrevious className="max-sm:hidden" />
                     <CarouselNext className="max-sm:hidden" />
                   </Carousel>
+                  <Separator className="my-6" />
                 </div>
               );
             })}
@@ -125,6 +126,20 @@ const Services = () => {
               02 SERVICE
             </h2>
           </div> */}
+          <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] select-none">
+            <div className="my-28">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
+                  Complete Interior{" "}
+                  <span className="text-primary">Solutions</span>
+                </h2>
+                <p className="max-w-2xl mx-auto text-lg text-on-surface-variant">
+                  No detail left behind—doors, partitions, POP, and more to
+                  elevate your interiors inside and out.
+                </p>
+              </div>
+            </div>
+          </section>
           <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] mt-20">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 grid-rows-[repeat(auto-fit, minmax(200px, 1fr))] transition-all duration-300">
               {/* LEFT */}
@@ -362,7 +377,7 @@ const Services = () => {
         </div>
       </section>
       <Cta />
-      <Faq />
+      <Faq FAQS={ServiceFAQ} />
     </>
   );
 };

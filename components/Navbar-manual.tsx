@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
-            {navMenu.map((item) => (
+            {navMenu?.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -128,7 +128,7 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <div className="flex flex-col p-2">
-            {navMenu.map((item) => (
+            {navMenu?.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}

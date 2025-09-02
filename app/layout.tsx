@@ -102,7 +102,7 @@ export default function RootLayout({
       className={`${outfit.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="font-sans">
+      <body className="font-sans select-none">
         <Toaster />
         <ThemeProvider
           attribute="class"

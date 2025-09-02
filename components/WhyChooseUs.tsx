@@ -1,4 +1,4 @@
-import { AlarmCheck, Cog, Hammer, Leaf } from "lucide-react";
+import { AlarmCheck, Cog, Hammer, Ribbon } from "lucide-react";
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { experienceInfo } from "@/public/assets/assets";
@@ -12,10 +12,10 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
         "Decades of experience delivering premium woodwork with meticulous attention to detail.",
     },
     {
-      icon: <Leaf />,
-      title: "Sustainable Materials",
+      icon: <Ribbon />,
+      title: "Made for Demands",
       description:
-        "We source only eco-friendly, high-quality wood from responsibly managed forests.",
+        "On-budget delivery with interiors built to handle heavy use in business environments.",
     },
     {
       icon: <Cog />,
@@ -51,7 +51,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+          {features?.map((feature, index) => (
             <Card key={index} className="">
               <CardHeader>
                 <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4">
@@ -66,7 +66,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-accent rounded-xl p-4">
-          {experienceInfo.map((stat, index) => (
+          {experienceInfo?.map((stat, index) => (
             <div key={index} className="text-center p-4">
               <div className="mb-2">
                 <h3 className="text-4xl font-extrabold text-primary">

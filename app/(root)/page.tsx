@@ -4,6 +4,7 @@ import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import ServiceCollection from "@/components/ServiceCollection";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import { HomeFAQ } from "@/public/assets/assets";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <About />
       <ServiceCollection />
       <Cta />
-      <Faq />
+      <Faq FAQS={HomeFAQ} />
     </main>
   );
 }

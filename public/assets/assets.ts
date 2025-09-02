@@ -118,6 +118,12 @@ import windowNavPreview from "@/public/assets/images/services/Nav/window-preview
 import wallNavPreview from "@/public/assets/images/services/Nav/wall-preview.webp";
 import { StaticImageData } from "next/image";
 
+// Social
+import facebook from "@/public/assets/images/social/facebook.svg";
+import instagram from "@/public/assets/images/social/instagram.svg";
+import linkedin from "@/public/assets/images/social/linkedin.svg";
+import twitter from "@/public/assets/images/social/twitter.svg";
+
 export const assets = {
   logo,
   bgStarDark,
@@ -143,31 +149,54 @@ export const navMenu = [
   {
     name: "Home",
     href: "/",
-    seoTitle: "Home - Donet Interiors | Premium Interior Design Services",
+    // seoTitle: "Home - Donet Interiors | Premium Interior Design Services",
   },
   {
     name: "Services",
     href: "/services",
-    seoTitle:
-      "Interior Design Services - Modular Kitchen, Wardrobes, False Ceiling",
+    // seoTitle:
+    //   "Interior Design Services - Modular Kitchen, Wardrobes, False Ceiling",
   },
-  {
-    name: "Gallery",
-    href: "/gallery",
-    seoTitle: "Interior Design Gallery - View Our Premium Projects Portfolio",
-  },
+  // {
+  //   name: "Gallery",
+  //   href: "/gallery",
+  //   seoTitle: "Interior Design Gallery - View Our Premium Projects Portfolio",
+  // },
   {
     name: "About",
     href: "/about",
-    seoTitle: "About Donet Interiors - 25+ Years Interior Design Experience",
+    // seoTitle: "About Donet Interiors - 25+ Years Interior Design Experience",
   },
   {
     name: "Contact",
     href: "/contact",
-    seoTitle:
-      "Contact Us - Interior Design Consultation in Coimbatore, Tiruppur, Erode",
+    // seoTitle:
+    // "Contact Us - Interior Design Consultation in Coimbatore, Tiruppur, Erode",
   },
 ] as const;
+
+export const socialLinks = [
+  {
+    social: "instagram",
+    link: process.env.NEXT_PUBLIC_INSTAGRAM_LINK,
+    icon: instagram,
+  },
+  {
+    social: "facebook",
+    link: process.env.NEXT_PUBLIC_FACEBOOK_LINK,
+    icon: facebook,
+  },
+  {
+    social: "linkedin",
+    link: process.env.NEXT_PUBLIC_LINKEDIN_LINK,
+    icon: linkedin,
+  },
+  {
+    social: "twitter",
+    link: process.env.NEXT_PUBLIC_TWITTER_LINK,
+    icon: twitter,
+  },
+];
 
 export const experienceInfo = [
   {
@@ -893,6 +922,108 @@ export const servicesNav: ServiceNavType[] = [
 //     areas: ["Perundurai Road", "Karur Road", "Salem Road", "Bhavani Road"],
 //   },
 // ] as const;
+
+export const HomeFAQ = [
+  {
+    faq: "What is the first step to starting a project with PSK Interiors?",
+    value:
+      "The first step is to book a free consultation. We'll discuss your ideas, budget, and requirements, followed by a site visit. Then, we provide a detailed proposal with designs and a transparent quote.",
+  },
+  {
+    faq: "How long does a typical carpentry project take to complete?",
+    value:
+      "Project timelines vary based on scope and complexity. A custom wardrobe may take 2-4 weeks, while a full modular kitchen or office fit-out can take 3-6 weeks from final measurement to installation.",
+  },
+  {
+    faq: "Why is PSK Interiors perfect for your home interior design?",
+    value:
+      "PSK Interiors is the perfect partner who can build your home interiors just the way you want! Our design experts customize designs as per your needs. They will listen to your ideas and suggest options. At PSK Interiors, we incorporate advanced technology into our modular solutions to create flawless interiors and also to expedite the process of making your dream space a reality.",
+  },
+  {
+    faq: "What materials do you typically work with?",
+    value:
+      "We work with a wide range of materials including premium MR grade plywood, MDF, particle boards, and solid wood, finished with high-quality laminates, veneers, and acrylics to suit your budget and style.",
+  },
+];
+
+export const AboutFAQ = [
+  {
+    faq: "What makes PSK Interiors different from other carpenters?",
+    value:
+      "We combine expert craftsmanship with a professional project management approach. You get a dedicated support, clear timelines, and zero hidden costs, ensuring a smooth and reliable experience.",
+  },
+  {
+    faq: "Do you offer a warranty on your work?",
+    value:
+      "Yes, we stand behind our quality. We offer a standard warranty on our products and workmanship. The specific warranty period will be detailed in your project agreement.",
+  },
+  {
+    faq: "Will my home/office be a mess during the installation?",
+    value:
+      "Not at all. We treat your space with respect. Our team uses protective coverings and is committed to thorough clean-up after the installation is complete, leaving you with a finished space ready to use.",
+  },
+  {
+    faq: "Can you work within my specific budget?",
+    value:
+      "Yes. We are transparent about costs from the start. We provide solutions and material options that align with your budget without compromising on structural quality or finish.",
+  },
+];
+
+export const ServiceFAQ = [
+  {
+    faq: "What are the advantages of a modular kitchen over a traditional one?",
+    value:
+      "Modular kitchens offer faster installation, better functionality with optimized storage solutions, easier maintenance, and a sleek, modern aesthetic. They are also customizable to fit any layout perfectly.",
+  },
+  {
+    faq: "How do you help me choose the right wardrobe design for my space?",
+    value:
+      "We consider your storage needs, room layout, and style preferences. We then provide designs for options like sliding door wardrobes, walk-in closets, or built-in units with custom interiors for drawers, hanging, and shelving.",
+  },
+  {
+    faq: "Can you design a TV unit that also provides storage?",
+    value:
+      "Absolutely. Our entertainment units are designed to be both a focal point and highly functional. We integrate features like media storage, display shelves, and concealed cabinets to hide clutter while complementing your room's decor.",
+  },
+  {
+    faq: "Do you create custom furniture for commercial spaces like offices?",
+    value:
+      "Yes, we specialize in commercial carpentry. We build durable, functional, and brand-aligned furniture for offices, including reception desks, executive workstations, conference tables, and cafeteria seating.",
+  },
+  {
+    faq: "What is the process for a false ceiling or wall paneling project?",
+    value:
+      "Our process includes a structural assessment, design consultation focusing on lighting and aesthetic goals, and precise installation using high-quality materials like gypsum board or PVC panels for a flawless finish.",
+  },
+  {
+    faq: "How does the pricing work for your carpentry services?",
+    value:
+      "Pricing is based on the project's scope, materials selected, and design complexity. We provide a detailed, transparent quote after the consultation, with no hidden costs, so you know exactly what to expect.",
+  },
+];
+
+export const ContactFAQ = [
+  {
+    faq: "What information should I include when I contact you for a quote?",
+    value:
+      "For the fastest response, please share your project type (e.g., kitchen, wardrobe), approximate dimensions, your location, and any reference images you have. This helps us provide an accurate initial assessment.",
+  },
+  {
+    faq: "How soon can I expect a response after emailing?",
+    value:
+      "We typically respond to all inquiries within 24 hours on business days. For urgent requests, we recommend calling us directly for an immediate response.",
+  },
+  {
+    faq: "Do you provide free on-site consultations?",
+    value:
+      "Yes! We offer complimentary, no-obligation site visits and consultations for projects in and around Tiruppur. This allows us to take precise measurements and provide you with the most accurate quote.",
+  },
+  {
+    faq: "What are your business hours?",
+    value:
+      "Our team is available to discuss your project from Monday to Saturday, 10 AM to 7 PM. You can reach us via phone, email at any time, and we will get back to you promptly.",
+  },
+];
 
 // TYPES
 export type ServiceCategory = (typeof services)[number];

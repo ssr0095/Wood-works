@@ -16,18 +16,28 @@ const Hero = () => {
       <div className="relative h-full flex flex-col items-start justify-center text-center">
         <div className="max-w-7xl px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
           {/* Main Heading */}
-          <h1 className="text-[min(15vw,135px)] font-medium leading-tight xl:leading-32 tracking-tight text-balance max-sm:text-center text-start text-primary-foreground mb-16">
-            <span>Interior work that </span>Speaks Quality
+          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-tight xl:leading-32 tracking-tight text-balance text-center md:text-start text-primary-foreground mb-16">
+            <span>Built for Homes, Offices & </span> Beyond
+            {/* Designs that Define Your Space 
+            Where Function Meets Craftsmanship
+
+Spaces Styled, Work Perfected
+
+Quality Interiors, Every Detail
+
+Tailored Designs for Every Space
+
+Interiors with Purpose & Precision
+
+Built for Homes, Offices & Beyond */}
           </h1>
 
           {/* Subheading */}
           {/* <p className="text-[min(4vw,18px)] text-on-primary/90 max-w-2xl mx-auto mb-10">
-            Transforming your spaces with expert carpentry and custom woodwork
-            solutions tailored to your lifestyle.
-          </p> */}
+Your trusted partner for high-quality, sustainable craftsmanship — whether it’s a custom kitchen, sleek office fitting, or a stylish store renovation.          </p> */}
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button
               variant="secondary"
               size="lg"
@@ -42,7 +52,7 @@ const Hero = () => {
                 size="lg"
                 className="border-2 border-white text-white "
               >
-                Get Free Quote
+                Get a Free Quote
               </Button>
             </ContactDrawer>
           </div>

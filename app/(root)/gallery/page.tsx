@@ -45,7 +45,7 @@ const Gallery = () => {
     //       <section className="py-16 bg-muted/30">
     //         <div className="container">
     //           <div className="grid md:grid-cols-3 gap-8">
-    //             {category.map((feature, index) => (
+    //             {category?.map((feature, index) => (
     //               <Card
     //                 key={feature.id}
     //                 className="hover:shadow-lg transition-shadow"

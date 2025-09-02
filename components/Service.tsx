@@ -33,12 +33,11 @@ const ServiceCard = ({ title, description, items, link }: ServiceType) => {
           alt={items[1]?.name}
           placeholder="blur"
         />
-        <div className="absolute inset-0 bg-linear-[30deg] to-60% from-black opacity-100 transition-opacity duration-500 flex flex-col items-start justify-end p-5 gap-1 group-hover:md:gap-3">
+        <div className="absolute inset-0 bg-linear-[30deg] to-60% from-black opacity-100 transition-opacity duration-500 flex flex-col items-start justify-end p-5 gap-1 md:gap-3">
           <h3 className="text-white text-2xl md:text-3xl lg:text-4xl">
             {title}
           </h3>
           <p className="max-h-0 group-hover:max-h-32 text-white/70 text-xs md:text-sm line-clamp-3 transition-all duration-1200 ease-out">
-            {" "}
             {description}
           </p>
         </div>

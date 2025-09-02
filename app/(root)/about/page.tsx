@@ -1,8 +1,9 @@
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import { assets } from "@/public/assets/assets";
-import Image from "next/image";
+import { AboutFAQ, assets } from "@/public/assets/assets";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BadgeCheck, Blocks } from "lucide-react";
 
 const About = () => {
   const process = [
@@ -60,118 +61,57 @@ const About = () => {
       <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className="my-28">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
-              Exceptional Interior work{" "}
-              <span className="text-primary">Crafted with Passion</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Crafting Spaces with{" "}
+              <span className="text-primary">Purpose & Precision</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-on-surface-variant">
-              We combine traditional techniques with modern innovation to
-              deliver furniture that stands the test of time.
+            <p className="max-w-2xl mx-auto text-lg ">
+              We blend time-honored craftsmanship with modern design, delivering
+              interiors that look exceptional—and stand the test of time.
             </p>
           </div>
         </div>
       </section>
-      {/* Working process */}
-      <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] py-16 bg-cover dark:bg-center bg-[url(/assets/images/background/blur-bg-01.png)] dark:bg-[url(/assets/images/background/stacked-steps-01-dark-blur.webp)]">
-        <div className="w-full flex items-center justify-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
-            Our process
-          </span>
-        </div>
-        <div className="my-16 flex flex-col items-center gap-14">
-          <div className="w-full justify-between items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
-            <div className="w-full flex-col max-lg:text-center justify-start lg:items-start items-center gap-2 inline-flex">
-              {/* <div className="w-full flex flex-col justify-start lg:items-start items-center gap-1"> */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-3">
-                Building Stronger Communities through Collaboration and
-                Empowerment
-              </h2>
-              <p className="max-w-2xl mx-auto text-md text-primary-foreground/70">
-                We combine traditional techniques with modern innovation to
-                deliver furniture that stands the test of time. We combine
-                traditional techniques with modern innovation to deliver
-                furniture that stands the test of time. We combine traditional
-                techniques with modern innovation to deliver furniture that
-                stands the test of time.
-              </p>
-              {/* </div>  */}
-            </div>
-            <div className="flex items-center justify-center relative z-0">
-              <Image
-                loading="lazy"
-                placeholder="blur"
-                className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src={assets.logo}
-                alt="about Us image"
-                width={256}
-                height={192}
-              />
-              {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
-            </div>
-          </div>
-          <div className="w-full justify-between items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
-            <div className="flex items-center justify-center relative z-0">
-              <Image
-                loading="lazy"
-                placeholder="blur"
-                className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src={assets.logo}
-                alt="about Us image"
-                width={256}
-                height={192}
-              />
-              {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
-            </div>
-            <div className="w-full flex-col max-lg:text-center justify-start lg:items-start items-center gap-2 inline-flex">
-              {/* <div className="w-full flex flex-col justify-start lg:items-start items-center gap-1"> */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-3">
-                Building Stronger Communities through Collaboration and
-                Empowerment
-              </h2>
-              <p className="max-w-2xl mx-auto text-md text-primary-foreground/70">
-                We combine traditional techniques with modern innovation to
-                deliver furniture that stands the test of time. We combine
-                traditional techniques with modern innovation to deliver
-                furniture that stands the test of time. We combine traditional
-                techniques with modern innovation to deliver furniture that
-                stands the test of time.
-              </p>
-              {/* </div>  */}
-            </div>
-          </div>
-          <div className="w-full justify-between items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
-            <div className="w-full flex-col max-lg:text-center justify-start lg:items-start items-center gap-2 inline-flex">
-              {/* <div className="w-full flex flex-col justify-start lg:items-start items-center gap-1"> */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-3">
-                Building Stronger Communities through Collaboration and
-                Empowerment
-              </h2>
-              <p className="max-w-2xl mx-auto text-md text-primary-foreground/70">
-                We combine traditional techniques with modern innovation to
-                deliver furniture that stands the test of time. We combine
-                traditional techniques with modern innovation to deliver
-                furniture that stands the test of time. We combine traditional
-                techniques with modern innovation to deliver furniture that
-                stands the test of time.
-              </p>
-              {/* </div>  */}
-            </div>
-            <div className="flex items-center justify-center relative z-0">
-              <Image
-                loading="lazy"
-                placeholder="blur"
-                className="w-64 rounded-3xl object-cover aspect-4/3 ring-4 ring-primary"
-                src={assets.logo}
-                alt="about Us image"
-                width={256}
-                height={192}
-              />
-              {/* <span className="hidden lg:block absolute -top-10 -right-10 w-full h-full bg-accent rounded-3xl -z-10"></span> */}
-            </div>
-          </div>
+      {/* Who we are and what we do */}
+      <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+        <div className="flex items-center gap-5 max-md:flex-col md:flex-row">
+          <Card>
+            <CardHeader className="flex items-center gap-5">
+              <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
+                <BadgeCheck />
+              </div>
+              <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold">
+                Who We Are
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-foreground">
+              Founded in 1989, PSK Interiors is a collective of passionate
+              designers and skilled craftsmen dedicated to transforming spaces
+              into beautiful, functional environments. Every project—be it a
+              cozy residence, efficient office, or dynamic retail space—is
+              crafted with precision and an unwavering commitment to quality.
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex items-center gap-5">
+              <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
+                <Blocks />
+              </div>
+              <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold">
+                What We Do
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-foreground">
+              We provide end-to-end interior solutions, thoughtfully tailored
+              for residential, commercial, and corporate clients. From modular
+              kitchens, wardrobes, and TV units to office fit-outs, retail
+              displays, and custom carpentry, we design, build, and install
+              interiors that match your vision and endure over time.{" "}
+            </CardContent>
+          </Card>
         </div>
       </section>
-
+      {/* Our Process */}
       <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className="my-28">
           {/* Section Header */}
@@ -188,7 +128,7 @@ const About = () => {
           {/* Features Grid */}
           <div className="relative grid items-center gap-8">
             <span className="absolute top-6 left-11 w-2 h-[90%] bg-primary -z-10"></span>
-            {process.map((feature, index) => (
+            {process?.map((feature, index) => (
               <div
                 key={index}
                 className="grid max-md:grid-rows-[65px_1fr] md:grid-cols-[75px_1fr] p-6 rounded-xl border bg-[url('/assets/images/background/bg-star.svg')] dark:bg-[url('/assets/images/background/dark-star-pattern-bg.svg')]"
@@ -197,7 +137,7 @@ const About = () => {
                   {index + 1 + "."}
                 </div>
                 <div className="w-full flex flex-col items-start justify-center gap-1.5">
-                  <h2 className="text-card-foreground leading-none font-semibold">
+                  <h2 className="text-card-foreground leading-none font-semibold text-xl">
                     {feature.title}
                   </h2>
                   <div className="text-muted-foreground text-sm">
@@ -206,15 +146,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              // <Card key={index} className="">
-              //   <CardHeader className="flex flex-col items-center">
-              //     <div className="size-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4">
-              //       {index + 1}
-              //     </div>
-              //     <CardTitle>{feature.title}</CardTitle>
-              //     <CardDescription>{feature.description}</CardDescription>
-              //   </CardHeader>
-              // </Card>
             ))}
           </div>
         </div>
@@ -222,7 +153,7 @@ const About = () => {
       {/* Why choose Us*/}
       <WhyChooseUs btnNeed={false} />
       {/* FAQ */}
-      <Faq />
+      <Faq FAQS={AboutFAQ} />
       {/* CTA */}
       <Cta />
     </>

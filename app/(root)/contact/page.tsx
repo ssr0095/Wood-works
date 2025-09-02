@@ -4,13 +4,18 @@ import Faq from "@/components/Faq";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 // import WhyChooseUs from "@/components/WhyChooseUs";
-import { assets } from "@/public/assets/assets";
+import { assets, ContactFAQ } from "@/public/assets/assets";
 import { Copy, Headphones, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Contact = () => {
   const navigation = useRouter();
@@ -70,12 +75,12 @@ const Contact = () => {
         <div className="my-28">
           {/* Section Header */}
           <div className="w-full max-w-xl mx-auto flex flex-col items-center gap-4 mb-16">
-            <div className="flex max-sm:flex-col items-center gap-3">
+            <div className="flex max-sm:flex-col items-center gap-5">
               <span className="size-12 rounded-full bg-primary text-primary-foreground text-center flex items-center justify-center">
                 <Headphones />
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Connect With <span className="text-primary">Us</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center">
+                Let’s Start Your <span className="text-primary">Project</span>
               </h2>
             </div>
             <p className="text-lg text-foreground text-center">
@@ -100,9 +105,16 @@ const Contact = () => {
                   <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
                     {process.env.NEXT_PUBLIC_PHONE_TEXT}
                   </div>
-                  <Button size="icon">
-                    <Copy />
-                  </Button>
+                  <Tooltip delayDuration={400}>
+                    <TooltipTrigger asChild>
+                      <Button size="icon">
+                        <Copy />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      <p>Copy</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
               </div>
               <div className="w-full flex flex-col gap-3">
@@ -122,9 +134,16 @@ const Contact = () => {
                   <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
                     {process.env.NEXT_PUBLIC_EMAIL}
                   </div>
-                  <Button size="icon">
-                    <Copy />
-                  </Button>
+                  <Tooltip delayDuration={400}>
+                    <TooltipTrigger asChild>
+                      <Button size="icon">
+                        <Copy />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      <p>Copy</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
               </div>
             </div>
@@ -133,7 +152,7 @@ const Contact = () => {
 
         {/* Social */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {processes.map((feature, index) => (
+          {processes?.map((feature, index) => (
             <Card
               key={index}
               className="py-4 hover:bg-accent/50 transition-colors cursor-pointer"
@@ -165,7 +184,7 @@ const Contact = () => {
         </div>
       </section>
       {/* FAQ */}
-      <Faq />
+      <Faq FAQS={ContactFAQ} />
       {/* CTA */}
       <Cta />
     </>
