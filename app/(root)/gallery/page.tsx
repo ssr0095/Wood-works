@@ -121,5 +121,5 @@ const Gallery = () => {
     //     </>
   );
 };
-// Gallery.theme = "dark";
+Gallery.theme = "light";
 export default Gallery;

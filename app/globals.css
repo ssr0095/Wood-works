@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @import "../styles/ripple.css";
+@import "../styles/PrivacyPolicy.css";
 
 @custom-variant dark (&:is(.dark *));
 

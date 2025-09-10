@@ -111,10 +111,12 @@ const Services = () => {
                           </CarouselItem>
                         );
                       })}
+                      <CarouselPrevious className="max-sm:hidden" />
+                      <CarouselNext className="max-sm:hidden" />
                     </CarouselContent>
 
-                    <CarouselPrevious className="max-sm:hidden" />
-                    <CarouselNext className="max-sm:hidden" />
+                    {/* <CarouselPrevious className="max-sm:hidden" />
+                    <CarouselNext className="max-sm:hidden" /> */}
                   </Carousel>
                   <Separator className="my-6" />
                 </div>

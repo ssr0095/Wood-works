@@ -6,7 +6,11 @@ import { Suspense } from "react";
 import Loading from "@/components/Loading";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import TermlyCMP from "@/components/TermlyCMP";
 // import { StructuredData } from "@/components/StructuredData";
+
+const WEBSITE_UUID = "ffa24119-adec-42ac-ba8f-92c78747c0a1";
 
 const outfit = localFont({
   src: [
@@ -103,6 +107,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans select-none">
+        <TermlyCMP websiteUUID={WEBSITE_UUID} />
         <Toaster />
         <ThemeProvider
           attribute="class"
@@ -116,6 +121,7 @@ export default function RootLayout({
         </ThemeProvider>
         {/* <StructuredData /> */}
       </body>
+      <GoogleAnalytics gaId="G-RP7KM1DC3H" />
     </html>
   );
 }

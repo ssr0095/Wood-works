@@ -198,6 +198,38 @@ export const socialLinks = [
   },
 ];
 
+export const CreditsList = [
+  {
+    title: "Icons",
+    desc: "Powered by Lucide, MIT License.",
+    link: "https://lucide.dev",
+  },
+  {
+    title: "UI Components",
+    desc: "Built with Shadcn/ui, MIT License.",
+    link: "https://ui.shadcn.com",
+  },
+  {
+    title: "Backgrounds",
+    desc: "Patterns from SVB Backgrounds, free license.",
+    link: "https://www.svgbackgrounds.com",
+  },
+  {
+    title: "Photography",
+    desc: "Images from Pixabay & Unsplash.",
+    link: "https://unsplash.com",
+  },
+  {
+    title: "Typography",
+    desc: "Set in Outfit by Indian Type Foundry.",
+    link: "https://fonts.google.com/specimen/Outfit",
+  },
+  {
+    title: "AI Tools",
+    desc: "Content support from ChatGPT, Claude, and Deepseek.",
+  },
+];
+
 export const experienceInfo = [
   {
     value: "25+",

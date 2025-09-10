@@ -17,8 +17,12 @@ type ServiceType = {
 
 const ServiceCard = ({ title, description, items, link }: ServiceType) => {
   return (
-    <Link href={`/services#${link}`} onClick={() => scrollTo(0, 0)}>
-      <div className="relative group aspect-3/4 overflow-hidden">
+    <Link
+      href={`/services#${link}`}
+      onClick={() => scrollTo(0, 0)}
+      className=" group "
+    >
+      <div className="relative aspect-3/4 overflow-hidden">
         <Image
           loading="lazy"
           className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"

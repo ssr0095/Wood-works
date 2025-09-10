@@ -70,13 +70,31 @@ const Footer = () => {
           <p className="text-xl font-medium text-foreground/95 mb-5">LEGAL</p>
           <ul className="flex flex-col gap-1 text-foreground/70">
             <li>
-              <Link className="hover:underline" href="#">
+              <Link className="hover:underline" href="/privacy-policy">
                 Privacy policy
               </Link>
             </li>
             <li>
               <Link className="hover:underline" href="#">
                 Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="/cookies">
+                Cookies policy
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="/credits">
+                Credits & Attribution
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="hover:underline termly-display-preferences"
+                href="#"
+              >
+                Consent Preferences
               </Link>
             </li>
           </ul>
@@ -165,8 +183,8 @@ const Footer = () => {
           <p className="hover:underline">Terms of Use</p>
         </div>
         <p>
-          © 2025 {process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}{" "}
-          <span className="px-1">|</span> All rights reserved.
+          © 2025 PSK Interiors <span className="px-1">|</span> All rights
+          reserved.
         </p>
       </div>
     </footer>
