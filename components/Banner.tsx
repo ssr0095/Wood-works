@@ -73,9 +73,10 @@ const Banner = () => {
                     >
                       <Image
                         src={item.icon}
-                        alt={item.social}
+                        alt={item.title}
                         className="text-white"
                       />
+                      <span className="sr-only">{item.title} follow link</span>
                     </Link>
                   </li>
                 );

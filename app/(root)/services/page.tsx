@@ -1,30 +1,16 @@
-"use client";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
 import { assets, ServiceFAQ, services } from "@/public/assets/assets";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { Separator } from "@/components/ui/separator";
+import ClientHead from "@/components/ClientHead";
+import ServicePageCard from "@/components/ServicePageCard";
+import { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
 
 const Services = () => {
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
-
-  const toggleExpand = (index: string) => {
-    setExpanded((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
   return (
     <>
+      <ClientHead title="Services" description="Some Description..." />
       {/* Hero */}
       <section className="w-full h-[30vh] md:h-[50vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden select-none">
         <h1 className="text-3xl z-20 md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
@@ -50,84 +36,14 @@ const Services = () => {
       <section className="my-28 select-none">
         <div className="mt-20 relative" id="service-01">
           <div className="absolute size-40 top-44 right-10 bg-[url(/assets/images/leaf-1.svg)] bg-contain bg-no-repeat transform rotate-45" />
-          {/* <div className="w-full h-[10vh] md:h-[20vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground">
-              01 SERVICE
-            </h2>
-          </div> */}
+          {/* SERVICES SECTION */}
           <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
             {services?.map((service, index) => {
-              return (
-                <div key={index} className="mb-16" id={service.key}>
-                  <div className="my-10">
-                    <h2 className=" relative text-2xl lg:text-3xl font-bold text-foreground dark:text-primary-foreground mb-3">
-                      {service.category}
-                    </h2>
-                    <p className="max-w-4xl text-md text-foreground">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* <div className="w-full flex gap-4 items-center justify-center"> */}
-                  <Carousel>
-                    <CarouselContent>
-                      {service.items?.map((item, index: number) => {
-                        const isExpanded = expanded[service.category + index];
-
-                        return (
-                          <CarouselItem
-                            key={index}
-                            className="md:basis-1/2 lg:basis-1/3"
-                          >
-                            <Image
-                              src={item.image}
-                              alt={item.name}
-                              className="relative w-full aspect-3/4 object-cover hover:transform hover:scale-[1.03] transition-transform duration-400"
-                              loading="lazy"
-                              placeholder="blur"
-                            />
-
-                            <h2 className="text-lg font-semibold text-foreground dark:text-primary-foreground mt-2">
-                              {item.name}
-                            </h2>
-
-                            <p
-                              className={cn(
-                                "mt-1 text-sm text-foreground transition-all duration-300",
-                                isExpanded ? "line-clamp-none" : "line-clamp-2"
-                              )}
-                            >
-                              {item.description}
-                            </p>
-
-                            <button
-                              onClick={() =>
-                                toggleExpand(service.category + index)
-                              }
-                              className="mt-1 text-xs text-muted-foreground/70 hover:underline"
-                            >
-                              {isExpanded ? "Show less ↑" : "Read more ↓"}
-                            </button>
-                          </CarouselItem>
-                        );
-                      })}
-                      <CarouselPrevious className="max-sm:hidden" />
-                      <CarouselNext className="max-sm:hidden" />
-                    </CarouselContent>
-
-                    {/* <CarouselPrevious className="max-sm:hidden" />
-                    <CarouselNext className="max-sm:hidden" /> */}
-                  </Carousel>
-                  <Separator className="my-6" />
-                </div>
-              );
+              return <ServicePageCard service={service} key={index} />;
             })}
           </div>
-          {/* <div className="w-full h-[10vh] md:h-[20vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground">
-              02 SERVICE
-            </h2>
-          </div> */}
+
+          {/* 2ND HEADER */}
           <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] select-none">
             <div className="my-28">
               <div className="text-center mb-16">
@@ -142,6 +58,8 @@ const Services = () => {
               </div>
             </div>
           </section>
+
+          {/* IMAGES SECTION */}
           <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] mt-20">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 grid-rows-[repeat(auto-fit, minmax(200px, 1fr))] transition-all duration-300">
               {/* LEFT */}
@@ -154,14 +72,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.texturedWallDesignPattern}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.decorativeWallPaneling}
                     alt="gallery-photo"
                   />
@@ -182,14 +100,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.modernDiningRoomDesign}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-bottom transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-bottom transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.elegantDiningInterior}
                     alt="gallery-photo"
                   />
@@ -210,14 +128,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.modernPoojaRoomInterior}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.traditionalPoojaRoomDesign}
                     alt="gallery-photo"
                   />
@@ -241,14 +159,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.multiPurposeStorageSolution}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.modularSpaceSavingSolution}
                     alt="gallery-photo"
                   />
@@ -269,14 +187,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.ergonomicOfficeDesign}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.luxuryOfficeInterior}
                     alt="gallery-photo"
                   />
@@ -297,14 +215,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.luxuryMasterBedroom}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.modernBedroomInterior}
                     alt="gallery-photo"
                   />
@@ -325,14 +243,14 @@ const Services = () => {
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.modernInteriorDoorSolution}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.luxuryDoorDesignCollection}
                     alt="gallery-photo"
                   />
@@ -347,20 +265,20 @@ const Services = () => {
                 </div>
                 {/* WINDOW */}
                 <div
-                  className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg"
+                  className="relative col-span-2 group aspect-4/3 overflow-hidden rounded-lg active:opacity-100"
                   id="windows"
                 >
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 group-hover:opacity-0 group-active:opacity-0"
                     src={assets.modernWindowDesignSolution}
                     alt="gallery-photo"
                   />
                   <Image
                     placeholder="blur"
                     loading="lazy"
-                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100"
+                    className="absolute top-0 left-0 max-w-full h-full object-cover object-center transition duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100"
                     src={assets.stylishWindowTreatmentDesign}
                     alt="gallery-photo"
                   />
@@ -380,8 +298,119 @@ const Services = () => {
       </section>
       <Cta />
       <Faq FAQS={ServiceFAQ} />
+      <StructuredData data={Sdata} />
     </>
   );
 };
 
 export default Services;
+
+export const metadata: Metadata = {
+  title:
+    "Interior Design Services - Modular Kitchens, Wardrobes, TV Units & More",
+  description:
+    "Comprehensive interior design services including modular kitchens, custom wardrobes, TV units, false ceilings, aluminium partitions & complete interior solutions. Expert craftsmanship with 25+ years experience.",
+  keywords: [
+    "interior design services",
+    "modular kitchen design",
+    "custom wardrobes",
+    "TV units",
+    "false ceiling",
+    "POP design",
+    "aluminium partitions",
+    "bedroom design",
+    "office interiors",
+    "dining room design",
+  ],
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/services`,
+  },
+  openGraph: {
+    title: "Complete Interior Design Services - PSK Interiors",
+    description:
+      "From modular kitchens to custom wardrobes, TV units, and false ceilings. Complete interior solutions for homes and offices.",
+    url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/services`,
+    images: [
+      {
+        url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/assets/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Complete Interior Design Services - PSK Interiors",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+const Sdata = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Interior Design and Carpentry Services",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "PSK Interiors",
+    email: `${process.env.NEXT_PUBLIC_EMAIL}`,
+    telephone: `${process.env.NEXT_PUBLIC_PHONE_TEXT}`,
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Interior Design Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Modular Kitchen Design",
+          description:
+            "Custom modular kitchen solutions with space-saving designs and luxurious layouts",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Wardrobes & Storage",
+          description:
+            "Space-efficient wardrobes and storage solutions for bedrooms and walk-in closets",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "TV Units & Entertainment Centers",
+          description:
+            "Custom TV units and entertainment centers with modern design and functionality",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "False Ceiling & POP Design",
+          description:
+            "Sophisticated false ceiling solutions with POP and wooden designs",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Aluminium Partition Systems",
+          description:
+            "Premium aluminium partition solutions for offices and commercial spaces",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Home Office",
+          description: "A productive office space",
+        },
+      },
+    ],
+  },
+};

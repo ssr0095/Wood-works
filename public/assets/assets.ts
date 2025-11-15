@@ -177,24 +177,62 @@ export const navMenu = [
 
 export const socialLinks = [
   {
-    social: "instagram",
+    title: "instagram",
     link: process.env.NEXT_PUBLIC_INSTAGRAM_LINK,
     icon: instagram,
   },
   {
-    social: "facebook",
+    title: "facebook",
     link: process.env.NEXT_PUBLIC_FACEBOOK_LINK,
     icon: facebook,
   },
   {
-    social: "linkedin",
+    title: "linkedin",
     link: process.env.NEXT_PUBLIC_LINKEDIN_LINK,
     icon: linkedin,
   },
   {
-    social: "twitter",
+    title: "twitter",
     link: process.env.NEXT_PUBLIC_TWITTER_LINK,
     icon: twitter,
+  },
+];
+
+export const processes = [
+  {
+    title: "Consultation",
+    description: {
+      one: "We start by listening to your ideas, preferences, and requirements.",
+      two: "Our team visits your space(if required) to understand dimensions and possibilities.",
+    },
+  },
+  {
+    title: "Design & Planning",
+    description: {
+      one: "Based on your vision, we create practical design options that blend aesthetics with functionality.",
+      two: "Material choices, layouts, and finishes are discussed openly to suit your style and budget.",
+    },
+  },
+  {
+    title: "Execution & Craftsmanship",
+    description: {
+      one: "Once finalized, our skilled carpenters and fabricators get to work.",
+      two: "We use high- quality wood, aluminium, and POP to ensure durability and long- lasting results.",
+    },
+  },
+  {
+    title: "Quality Check & Finishing Touches",
+    description: {
+      one: "Every detail is carefully inspected to ensure precision.",
+      two: "We focus on smooth finishes, perfect fittings, and a flawless look.",
+    },
+  },
+  {
+    title: "Handover & Support",
+    description: {
+      one: "We hand over your transformed space on time.",
+      two: "Our team remains available for after-service support whenever you need it.",
+    },
   },
 ];
 
@@ -1058,7 +1096,7 @@ export const ContactFAQ = [
 ];
 
 // TYPES
-export type ServiceCategory = (typeof services)[number];
+export type ServiceCategoryType = (typeof services)[number];
 // export type ServiceNavImageType = typeof serviceNavImages;
 export type ServiceNavType = {
   key: string;
@@ -1071,6 +1109,7 @@ export type ServiceNavType = {
 };
 // export type LocationData = typeof locations[number];
 export type NavMenuItem = (typeof navMenu)[number];
+export type SocialCardsType = (typeof socialLinks)[number];
 export type ListItemProps = React.ComponentPropsWithoutRef<"a"> & {
   title: string;
   children: React.ReactNode;

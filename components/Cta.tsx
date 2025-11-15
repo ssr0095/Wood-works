@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { PhoneIcon } from "lucide-react";
-import ContactDrawer from "./ContactDrawer";
+import ContactDrawerDynamic from "./dynamic/ContactDrawerDynamic";
 
 const Cta = () => {
   return (
@@ -12,12 +12,12 @@ const Cta = () => {
             Ready to Transform Your Space?
           </h2>
         </div>
-        <ContactDrawer>
+        <ContactDrawerDynamic>
           <Button size="lg" variant="secondary" className="max-sm:w-[60%]">
             <PhoneIcon />
             Call Us
           </Button>
-        </ContactDrawer>
+        </ContactDrawerDynamic>
       </div>
     </section>
   );

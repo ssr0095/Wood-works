@@ -1,4 +1,10 @@
+// next.config.js
 import type { NextConfig } from "next";
+import withBundleAnalyzer from "@next/bundle-analyzer";
+
+const bundleAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
   eslint: {
@@ -13,6 +19,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // You can add other config here
 };
 
-export default nextConfig;
+// Export the wrapped config
+export default bundleAnalyzer(nextConfig);

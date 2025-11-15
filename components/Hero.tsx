@@ -1,5 +1,5 @@
 "use client";
-import ContactDrawer from "./ContactDrawer";
+import ContactDrawerDynamic from "./dynamic/ContactDrawerDynamic";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
@@ -46,7 +46,7 @@ Your trusted partner for high-quality, sustainable craftsmanship â€” whether itâ
               Explore Our Services
             </Button>
 
-            <ContactDrawer>
+            <ContactDrawerDynamic>
               <Button
                 variant="ghost"
                 size="lg"
@@ -54,7 +54,7 @@ Your trusted partner for high-quality, sustainable craftsmanship â€” whether itâ
               >
                 Get a Free Quote
               </Button>
-            </ContactDrawer>
+            </ContactDrawerDynamic>
           </div>
         </div>
 

@@ -1,69 +1,18 @@
-"use client";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-// import WhyChooseUs from "@/components/WhyChooseUs";
-import { assets, ContactFAQ } from "@/public/assets/assets";
-import { Copy, Headphones, Mail, Phone } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { toast } from "sonner";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { ContactFAQ, socialLinks } from "@/public/assets/assets";
+import { Headphones } from "lucide-react";
+import { Metadata } from "next";
+import ClientHead from "@/components/ClientHead";
+import SocialCard from "@/components/SocialLinks";
+import ContactInputs from "@/components/ContactInputs";
+import StructuredData from "@/components/StructuredData";
 
 const Contact = () => {
-  const navigation = useRouter();
-  const processes = [
-    {
-      title: "Consultation",
-      description: {
-        one: "We start by listening to your ideas, preferences, and requirements.",
-        two: "Our team visits your space(if required) to understand dimensions and possibilities.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Design & Planning",
-      description: {
-        one: "Based on your vision, we create practical design options that blend aesthetics with functionality.",
-        two: "Material choices, layouts, and finishes are discussed openly to suit your style and budget.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Execution & Craftsmanship",
-      description: {
-        one: "Once finalized, our skilled carpenters and fabricators get to work.",
-        two: "We use high- quality wood, aluminium, and POP to ensure durability and long- lasting results.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Quality Check & Finishing Touches",
-      description: {
-        one: "Every detail is carefully inspected to ensure precision.",
-        two: "We focus on smooth finishes, perfect fittings, and a flawless look.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Handover & Support",
-      description: {
-        one: "We hand over your transformed space on time.",
-        two: "Our team remains available for after-service support whenever you need it.",
-      },
-      bg: assets.bgStarDark,
-    },
-  ];
-
   return (
     <>
+      <ClientHead title="Services" description="Some Description..." />
+
       {/* Hero */}
       <section className="w-full h-[30vh] md:h-[50vh] flex items-center justify-center bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)] overflow-hidden">
         <h1 className="text-3xl z-20 md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
@@ -87,99 +36,14 @@ const Contact = () => {
               Help is just a click away. Call us anytime between 10am - 7pm
             </p>
             {/* Contact details */}
-            <div className="w-full max-w-sm flex flex-col gap-8 mt-8">
-              <div className="w-full flex flex-col gap-3">
-                <div className="w-full flex items-center justify-start gap-3">
-                  <Phone className="w-4" />
-                  <Label>Phone</Label>
-                </div>
-                <div
-                  className="w-full flex items-center gap-2 cursor-pointer"
-                  onClick={async () => {
-                    await navigator.clipboard.writeText(
-                      `+91 ${process.env.NEXT_PUBLIC_PHONE_LINK}`
-                    );
-                    toast.success("Copied");
-                  }}
-                >
-                  <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                    {process.env.NEXT_PUBLIC_PHONE_TEXT}
-                  </div>
-                  <Tooltip delayDuration={400}>
-                    <TooltipTrigger asChild>
-                      <Button size="icon">
-                        <Copy />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      <p>Copy</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </div>
-              </div>
-              <div className="w-full flex flex-col gap-3">
-                <div className="w-full flex items-center justify-start gap-3">
-                  <Mail className="w-4" />
-                  <Label>Email</Label>
-                </div>
-                <div
-                  className="w-full flex items-center gap-2 cursor-pointer"
-                  onClick={async () => {
-                    await navigator.clipboard.writeText(
-                      `${process.env.NEXT_PUBLIC_EMAIL}`
-                    );
-                    toast.success("Copied");
-                  }}
-                >
-                  <div className="w-full px-4 py-2 rounded-md border border-border bg-accent text-accent-foreground">
-                    {process.env.NEXT_PUBLIC_EMAIL}
-                  </div>
-                  <Tooltip delayDuration={400}>
-                    <TooltipTrigger asChild>
-                      <Button size="icon">
-                        <Copy />
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      <p>Copy</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </div>
-              </div>
-            </div>
+            <ContactInputs />
           </div>
         </div>
 
         {/* Social */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {processes?.map((feature, index) => (
-            <Card
-              key={index}
-              className="py-4 hover:bg-accent/50 transition-colors cursor-pointer"
-              onClick={() => navigation.push("#")}
-            >
-              <CardContent className="flex items-center gap-5 px-4">
-                <div className="size-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
-                  <Image
-                    placeholder="blur"
-                    src={assets.logo}
-                    alt="wood"
-                    className="w-full object-center object-cover rounded-full"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-                <div className="flex flex-col items-start justify-center gap-1 cursor-default">
-                  <h2>Instagram</h2>
-                  <Link
-                    href="#"
-                    className="text-xs hover:underline hover:text-primary"
-                  >
-                    follow us
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+          {socialLinks?.map((social, index) => (
+            <SocialCard Social={social} key={index} />
           ))}
         </div>
       </section>
@@ -187,8 +51,72 @@ const Contact = () => {
       <Faq FAQS={ContactFAQ} />
       {/* CTA */}
       <Cta />
+      <StructuredData data={Sdata} />
     </>
   );
 };
 
 export default Contact;
+
+export const metadata: Metadata = {
+  title:
+    "Contact PSK Interiors - Free Consultation for Interior Design & Carpentry Services",
+  description:
+    "Get in touch with PSK Interiors for your interior design needs. Free consultation available. Call +91 98945-96902 or email care@pskinteriors.in. We're available 10am-7pm daily.",
+  keywords: [
+    "contact PSK interiors",
+    "interior design consultation",
+    "carpentry services contact",
+    "free consultation",
+    "interior design quote",
+  ],
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/contact`,
+  },
+  openGraph: {
+    title: "Contact PSK Interiors - Free Interior Design Consultation",
+    description:
+      "Ready to transform your space? Contact PSK Interiors for a free consultation. Expert interior design and carpentry services available.",
+    url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/contact`,
+    images: [
+      {
+        url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/assets/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Contact PSK Interiors - Free Interior Design Consultation ",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+const Sdata = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: "PSK Interiors",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      email: `${process.env.NEXT_PUBLIC_EMAIL}`,
+      telephone: `${process.env.NEXT_PUBLIC_PHONE_TEXT}`,
+      availableLanguage: ["Tamil", "English", "Hindi"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        opens: "10:00",
+        closes: "19:00",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+      },
+    },
+  },
+};

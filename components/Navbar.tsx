@@ -8,7 +8,9 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import ThemeToggle from "./ThemeToggle";
 import { Menu, ArrowRight, Phone } from "lucide-react";
-
+import { Navigation } from "./Navigation";
+import ContactDrawerDynamic from "./dynamic/ContactDrawerDynamic";
+import Banner from "./Banner";
 import {
   Sheet,
   SheetContent,
@@ -17,9 +19,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Navigation } from "./Navigation";
-import ContactDrawer from "./ContactDrawer";
-import Banner from "./Banner";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -54,12 +53,12 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-5">
             <ThemeToggle />
-            <ContactDrawer>
+            <ContactDrawerDynamic>
               <Button>
                 <Phone />
                 Call Now
               </Button>
-            </ContactDrawer>
+            </ContactDrawerDynamic>
           </div>
 
           {/* Mobile menu button */}

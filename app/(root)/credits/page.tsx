@@ -2,6 +2,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CreditsList } from "@/public/assets/assets";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const Credits = () => {
   return (
@@ -30,14 +31,14 @@ const Credits = () => {
               <CardTitle className="flex items-center gap-2">
                 {item.title}
                 {item.link && (
-                  <a
+                  <Link
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary"
                   >
                     <ExternalLink size={16} />
-                  </a>
+                  </Link>
                 )}
               </CardTitle>
             </CardHeader>

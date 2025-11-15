@@ -16,14 +16,15 @@ import {
   ListItemProps,
 } from "@/public/assets/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const ListItem = forwardRef<HTMLAnchorElement, ListItemProps>(
   ({ className, title, onHover, onLeave, href, ...props }, ref) => {
     return (
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
-          href={href}
+          href={`${href}`}
           className={cn("select-none rounded-md px-3 py-2", className)}
           onMouseEnter={onHover}
           onMouseLeave={onLeave}
@@ -33,7 +34,7 @@ const ListItem = forwardRef<HTMLAnchorElement, ListItemProps>(
           {/* <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p> */}
-        </a>
+        </Link>
       </NavigationMenuLink>
     );
   }
@@ -80,18 +81,6 @@ const MenuSection: React.FC<{
             </ListItem>
           ))}
         </div>
-
-        {/* <div className="mt-6 pt-4 border-t">
-          <NavigationMenuLink
-            href={`/${title
-              .toLowerCase()
-              .replace(" & ", "-")
-              .replace(" ", "-")}`}
-            className="text-sm text-primary hover:underline font-medium"
-          >
-            View All {title} →
-          </NavigationMenuLink>
-        </div> */}
       </div>
 
       {/* Right side - Image */}

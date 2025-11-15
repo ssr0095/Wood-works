@@ -8,13 +8,13 @@ import { HomeFAQ } from "@/public/assets/assets";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <WhyChooseUs btnNeed={true} />
       <About />
       <ServiceCollection />
       <Cta />
       <Faq FAQS={HomeFAQ} />
-    </main>
+    </>
   );
 }

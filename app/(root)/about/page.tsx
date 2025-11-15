@@ -1,54 +1,13 @@
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import { AboutFAQ, assets } from "@/public/assets/assets";
+import { AboutFAQ, processes } from "@/public/assets/assets";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BadgeCheck, Blocks } from "lucide-react";
+import { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
 
 const About = () => {
-  const process = [
-    {
-      title: "Consultation",
-      description: {
-        one: "We start by listening to your ideas, preferences, and requirements.",
-        two: "Our team visits your space(if required) to understand dimensions and possibilities.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Design & Planning",
-      description: {
-        one: "Based on your vision, we create practical design options that blend aesthetics with functionality.",
-        two: "Material choices, layouts, and finishes are discussed openly to suit your style and budget.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Execution & Craftsmanship",
-      description: {
-        one: "Once finalized, our skilled carpenters and fabricators get to work.",
-        two: "We use high- quality wood, aluminium, and POP to ensure durability and long- lasting results.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Quality Check & Finishing Touches",
-      description: {
-        one: "Every detail is carefully inspected to ensure precision.",
-        two: "We focus on smooth finishes, perfect fittings, and a flawless look.",
-      },
-      bg: assets.bgStarDark,
-    },
-    {
-      title: "Handover & Support",
-      description: {
-        one: "We hand over your transformed space on time.",
-        two: "Our team remains available for after-service support whenever you need it.",
-      },
-      bg: assets.bgStarDark,
-    },
-  ];
-
   return (
     <>
       {/* Hero */}
@@ -128,7 +87,7 @@ const About = () => {
           {/* Features Grid */}
           <div className="relative grid items-center gap-8">
             <span className="absolute top-6 left-11 w-2 h-[90%] bg-primary -z-10"></span>
-            {process?.map((feature, index) => (
+            {processes?.map((feature, index) => (
               <div
                 key={index}
                 className="grid max-md:grid-rows-[65px_1fr] md:grid-cols-[75px_1fr] p-6 rounded-xl border bg-[url('/assets/images/background/bg-star.svg')] dark:bg-[url('/assets/images/background/dark-star-pattern-bg.svg')]"
@@ -156,8 +115,61 @@ const About = () => {
       <Faq FAQS={AboutFAQ} />
       {/* CTA */}
       <Cta />
+      <StructuredData data={Sdata} />
     </>
   );
 };
 
 export default About;
+
+export const metadata: Metadata = {
+  title:
+    "About PSK Interiors - 25+ Years of Expert Interior Design & Carpentry Excellence",
+  description:
+    "Learn about PSK Interiors' journey spanning 25+ years in interior design & carpentry. Our expert team has completed 1500+ projects with 100% client satisfaction. Meet our master craftsmen.",
+  keywords: [
+    "about PSK interiors",
+    "interior design company",
+    "carpentry expertise",
+    "master craftsmen",
+    "interior design process",
+    "company history",
+  ],
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/about`,
+  },
+  openGraph: {
+    title: "About PSK Interiors - 25+ Years of Interior Design Excellence",
+    description:
+      "Discover our journey of 25+ years in creating exceptional interiors. Meet our team of master craftsmen and learn about our proven design process.",
+    url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/about`,
+    images: [
+      {
+        url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/assets/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "About PSK Interiors - Custom Interior Design & Carpentry Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+const Sdata = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PSK Interiors",
+  foundingDate: "1999",
+  description:
+    "Expert interior design and carpentry company with 25+ years of experience, specializing in creating functional and beautiful spaces.",
+  numberOfEmployees: "25+",
+  email: `${process.env.NEXT_PUBLIC_EMAIL}`,
+  telephone: `${process.env.NEXT_PUBLIC_PHONE_TEXT}`,
+  url: `https://${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}`,
+  sameAs: [
+    "https://www.facebook.com/pskinteriors",
+    "https://www.instagram.com/pskinteriors",
+  ],
+};

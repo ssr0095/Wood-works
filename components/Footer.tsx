@@ -149,6 +149,7 @@ const Footer = () => {
                 height={64}
               />
             ))}
+            <span className="sr-only">Instagram follow link</span>
           </Link>
         </div>
       </div>
@@ -165,9 +166,10 @@ const Footer = () => {
                 >
                   <Image
                     src={item.icon}
-                    alt={item.social}
+                    alt={item.title}
                     className="text-white"
                   />
+                  <span className="sr-only">{item.title} follow link</span>
                 </Link>
               </li>
             );

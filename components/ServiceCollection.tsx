@@ -7,7 +7,6 @@ const ServiceCollection = () => {
   const filter = services.concat(servicesAdd);
   return (
     <div className="">
-      {/* <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]"> */}
       <div className="my-28">
         <div className="px-4 sm:px-[5vw] text-center mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
@@ -32,16 +31,6 @@ const ServiceCollection = () => {
             />
           ))}
         </div>
-        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {filter?.map((item, index) => (
-                    <Service
-                    key={index}
-                    name={item?.name}
-                    description={item?.description}
-                    image={item?.image}
-                    />
-                ))}
-            </div> */}
         <div className="w-full text-center mt-10">
           <Link
             href="/services"

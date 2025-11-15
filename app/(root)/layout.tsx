@@ -6,12 +6,12 @@ import React from "react";
 
 const layout = ({ children }: { children: Readonly<React.ReactNode> }) => {
   return (
-    <main>
+    <>
       <Navbar />
       {children}
       {/* <Toaster /> */}
-      <Footer/>
-    </main>
+      <Footer />
+    </>
   );
 };
 
