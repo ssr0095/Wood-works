@@ -36,9 +36,7 @@ function AccordionItem({
       {...props}
     >
       {index !== undefined && (
-        <div className="text-primary-foreground text-sm font-medium py-4 select-none">
-          {index}.
-        </div>
+        <div className="text-sm font-medium py-4 select-none">{index}.</div>
       )}
       <div className="flex-1">{props.children}</div>
     </AccordionPrimitive.Item>

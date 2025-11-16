@@ -15,12 +15,12 @@ const About = () => {
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-3">
                 Passion Meets Precision
               </h2>
-              <p className="max-w-2xl mx-auto text-md text-primary-foreground/70">
+              <p className="max-w-2xl mx-auto text-md text-primary-foreground/85">
                 PSK Interiors was founded with a simple mission: to bring
                 together artistry, function, and sustainability in every
                 interior space we touch.
               </p>
-              <p className="max-w-2xl mx-auto text-md text-primary-foreground/70">
+              <p className="max-w-2xl mx-auto text-md text-primary-foreground/85">
                 Over the years, we’ve had the privilege of completing hundreds
                 of projects—from cozy residential rooms to large-scale
                 commercial interiors such as offices, retail stores, and
@@ -33,7 +33,7 @@ const About = () => {
               href="/about"
               className="inline-flex items-center px-8 py-3 rounded-full bg-background text-foreground hover:bg-accent font-medium shadow-sm hover:shadow-md transition-all"
             >
-              <span className="relative z-10">Learn more</span>
+              <span className="relative z-10">Discover Our Mission</span>
             </Link>
           </div>
           <div className="relative w-fit z-0 justify-self-end">

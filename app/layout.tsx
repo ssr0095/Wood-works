@@ -190,7 +190,7 @@ export default function RootLayout({
         <Toaster />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem // toggle true
           disableTransitionOnChange
           // forcedTheme={Component.theme || null}

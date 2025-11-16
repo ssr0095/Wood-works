@@ -17,7 +17,7 @@ const Banner = () => {
         <div className="lg:hidden max-w-7xl mx-auto flex justify-center">
           <Link
             href="/contact"
-            className=" text-sm font-medium text-primary-foreground transition-colors"
+            className=" text-sm font-medium text-white transition-colors"
           >
             Contact us now →
           </Link>
@@ -54,7 +54,7 @@ const Banner = () => {
             {/*Phone*/}
             <Link
               className="flex items-center gap-1 hover:underline text-white"
-              // alt="whatsapp"
+              aria-label="Whatsapp us"
               href={`https://wa.me/${process.env.NEXT_PUBLIC_PHONE_LINK}?text=${process.env.NEXT_PUBLIC_WHATSAPP_TEXT}`}
             >
               <Phone className="size-4" />
@@ -69,6 +69,7 @@ const Banner = () => {
                   <li key={index}>
                     <Link
                       href={`${item.link}`}
+                      aria-label={item.title}
                       className="flex items-center gap-1 hover:underline"
                     >
                       <Image

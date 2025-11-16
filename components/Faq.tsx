@@ -15,7 +15,7 @@ const Faq = ({ FAQS }: { FAQS: FAQtype[] }) => {
     <section className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <div className="my-28">
         <div className="text-center mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-muted text-accent-foreground border text-sm font-medium mb-4">
             Need more help?
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">

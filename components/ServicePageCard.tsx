@@ -68,7 +68,7 @@ const ServicePageCard = ({
 
                 <button
                   onClick={() => toggleExpand(service.category + index)}
-                  className="mt-1 text-xs text-muted-foreground/70 hover:underline"
+                  className="mt-1 text-xs text-muted-foreground/95 hover:underline"
                 >
                   {isExpanded ? "Show less ↑" : "Read more ↓"}
                 </button>

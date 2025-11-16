@@ -9,7 +9,7 @@ const ServiceCollection = () => {
     <div className="">
       <div className="my-28">
         <div className="px-4 sm:px-[5vw] text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-muted text-accent-foreground border text-sm font-medium mb-4">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">

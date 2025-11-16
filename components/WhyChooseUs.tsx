@@ -36,7 +36,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
       <div className="my-28">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-muted text-muted-foreground border text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-muted text-accent-foreground border text-sm font-medium mb-4">
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -87,7 +87,7 @@ const WhyChooseUs = ({ btnNeed }: { btnNeed: boolean }) => {
               href="/about"
               className="inline-flex items-center px-8 py-3 rounded-full text-foreground border-2 hover:bg-accent border-primary transition-all"
             >
-              Learn more
+              See the Process
             </Link>
           </div>
         )}

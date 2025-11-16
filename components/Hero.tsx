@@ -1,16 +1,38 @@
 "use client";
+import Image from "next/image";
 import ContactDrawerDynamic from "./dynamic/ContactDrawerDynamic";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const router = useRouter();
+  const { theme } = useTheme();
+  const [currTheme, setCurrTheme] = useState(
+    "/assets/images/background/stacked-peaks-05-noise.webp"
+  );
 
+  useEffect(() => {
+    setCurrTheme(
+      theme == "dark"
+        ? "/assets/images/background/stacked-peaks-04-dark-noise.webp"
+        : "/assets/images/background/stacked-peaks-05-noise.webp"
+    );
+  }, [theme]);
   return (
     <section className="relative w-full h-[90vh] overflow-hidden">
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center bg-[url(/assets/images/background/stacked-peaks-05-noise.webp)] dark:bg-[url(/assets/images/background/stacked-peaks-04-dark-noise.webp)]"
-        // style={{ backgroundImage: "url(/assets/images/stacked-peaks-05.svg)" }}
+      /> */}
+      <Image
+        src={currTheme}
+        alt="Background"
+        layout="fill" // Important for background effect
+        objectFit="cover" // Important for background effect
+        className="background-image" // Apply CSS class
+        fetchPriority="high"
+        loading="eager"
       />
       {/* Content */}
       <div className="relative h-full flex flex-col items-start justify-center text-center">
